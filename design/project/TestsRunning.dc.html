@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Test ve Performans — Test sürüyor</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./jk.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="jk">
+  <div class="tb">
+    <div class="tb-app"><span class="ic tb-logo" aria-hidden="true">&#xED5F;</span><span>JestKontrol</span></div>
+    <div class="tb-ctl" aria-hidden="true"><span class="ic">&#xE921;</span><span class="ic">&#xE922;</span><span class="ic">&#xE8BB;</span></div>
+  </div>
+  <div class="shell">
+    <nav class="side" aria-label="Ana menü">
+      <div class="brand">
+        <span class="ic brand-mark" aria-hidden="true">&#xED5F;</span>
+        <div><div class="brand-name">JestKontrol</div><div class="brand-sub">El hareketiyle kontrol</div></div>
+      </div>
+      <div class="nav">
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE80F;</span>Kontrol Paneli</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xED5F;</span>Hareketler</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE713;</span>Ayarlar</button>
+        <button type="button" class="nav-item on" aria-current="page"><span class="ic" aria-hidden="true">&#xE9D9;</span>Test ve Performans</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE946;</span>Hakkında</button>
+      </div>
+      <div class="side-foot">
+        <div class="estop"><span>Acil durdurma</span><kbd class="kbd">Ctrl+Alt+G</kbd></div>
+        <div class="side-row">
+          <div class="seg" role="group" aria-label="Dil"><button type="button" class="on" aria-pressed="true">TR</button><button type="button" aria-pressed="false">EN</button></div>
+          <button type="button" class="icon-btn" aria-label="Açık temaya geç"><span class="ic" aria-hidden="true">&#xE706;</span></button>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <header class="head">
+        <div>
+          <h1 class="h1">Test ve Performans</h1>
+          <p class="sub">Sistemin hızını ve doğruluğunu ölçün; sonuçları rapora aktarın.</p>
+        </div>
+        <div class="head-act">
+          <button type="button" class="btn btn-sec"><span class="ic" aria-hidden="true">&#xEDE1;</span>CSV olarak dışa aktar</button>
+        </div>
+      </header>
+      <div class="body">
+        <section class="card flexcol" style="flex: 1; min-width: 0">
+          <div class="card-h">
+            <span class="ic" aria-hidden="true">&#xEC4A;</span>
+            <h2 class="card-t">FPS testi</h2>
+            <div class="end"><span class="pill ok"><span class="ic" aria-hidden="true">&#xE73E;</span>BAŞARILI</span></div>
+          </div>
+          <p class="cap">Hedef ≥ 25 FPS · Son test 14:47 · 30 sn · 640 × 480</p>
+          <div style="display: flex; align-items: center; gap: 12px; margin-top: 12px">
+            <span class="lbl" id="fps-dur">Süre</span>
+            <div class="seg" role="group" aria-labelledby="fps-dur">
+              <button type="button" aria-pressed="false">10 sn</button>
+              <button type="button" class="on" aria-pressed="true">30 sn</button>
+              <button type="button" aria-pressed="false">60 sn</button>
+            </div>
+            <button type="button" class="btn btn-sec" style="margin-left: auto"><span class="ic" aria-hidden="true">&#xE72C;</span>Tekrar çalıştır</button>
+          </div>
+          <div class="mstats" style="margin-top: 14px">
+            <div class="mstat"><b>29,4</b><span>Ortalama FPS</span></div>
+            <div class="mstat"><b>26,4</b><span>En düşük</span></div>
+            <div class="mstat"><b>30,8</b><span>En yüksek</span></div>
+            <div class="mstat"><b>%100</b><span>Hedefin üstünde</span></div>
+          </div>
+          <h3 class="lbl" style="margin: 18px 0 6px">FPS, son test (30 saniye)</h3>
+          <div style="position: relative">
+            <svg class="chart" viewBox="0 0 518 380" role="img" aria-label="FPS zaman grafiği: 30 saniye boyunca 26,4 ile 30,8 arasında, ortalama 29,4; hedef olan 25 FPS çizgisinin hep üstünde">
+              <path class="ch-grid" fill="none" d="M34,350H470M34,265.5H470M34,181H470M34,96.5H470M34,12H470"/>
+              <g class="ax" text-anchor="end"><text x="26" y="354">0</text><text x="26" y="269.5">10</text><text x="26" y="185">20</text><text x="26" y="100.5">30</text><text x="26" y="16">40</text></g>
+              <g class="ax" text-anchor="middle"><text x="34" y="372">0</text><text x="106.7" y="372">5</text><text x="179.3" y="372">10</text><text x="252" y="372">15</text><text x="324.7" y="372">20</text><text x="397.3" y="372">25</text><text x="470" y="372">30 sn</text></g>
+              <path class="ch-area" d="M34.0,108.3 L41.3,104.1 L48.5,101.6 L55.8,98.2 L63.1,100.7 L70.3,105.0 L77.6,102.4 L84.9,97.3 L92.1,94.8 L99.4,99.0 L106.7,101.6 L113.9,98.2 L121.2,93.1 L128.5,89.7 L135.7,95.7 L143.0,99.9 L150.3,103.3 L157.5,100.7 L164.8,97.3 L172.1,96.5 L179.3,99.9 L186.6,104.1 L193.9,106.6 L201.1,103.3 L208.4,107.5 L215.7,105.0 L222.9,99.9 L230.2,95.7 L237.5,98.2 L244.7,102.4 L252.0,100.7 L259.3,97.3 L266.5,101.6 L273.8,105.8 L281.1,112.6 L288.3,120.2 L295.6,126.9 L302.9,122.7 L310.1,115.1 L317.4,108.3 L324.7,103.3 L331.9,99.9 L339.2,97.3 L346.5,94.0 L353.7,96.5 L361.0,100.7 L368.3,104.1 L375.5,101.6 L382.8,98.2 L390.1,94.8 L397.3,97.3 L404.6,101.6 L411.9,105.0 L419.1,102.4 L426.4,99.0 L433.7,95.7 L440.9,98.2 L448.2,101.6 L455.5,99.9 L462.7,97.3 L470.0,99.9 L470.0,350 L34,350 Z"/>
+              <path class="ch-target" d="M34,138.8H470"/>
+              <text x="470" y="131" text-anchor="end">Hedef 25 FPS</text>
+              <path class="ch-line" d="M34.0,108.3 L41.3,104.1 L48.5,101.6 L55.8,98.2 L63.1,100.7 L70.3,105.0 L77.6,102.4 L84.9,97.3 L92.1,94.8 L99.4,99.0 L106.7,101.6 L113.9,98.2 L121.2,93.1 L128.5,89.7 L135.7,95.7 L143.0,99.9 L150.3,103.3 L157.5,100.7 L164.8,97.3 L172.1,96.5 L179.3,99.9 L186.6,104.1 L193.9,106.6 L201.1,103.3 L208.4,107.5 L215.7,105.0 L222.9,99.9 L230.2,95.7 L237.5,98.2 L244.7,102.4 L252.0,100.7 L259.3,97.3 L266.5,101.6 L273.8,105.8 L281.1,112.6 L288.3,120.2 L295.6,126.9 L302.9,122.7 L310.1,115.1 L317.4,108.3 L324.7,103.3 L331.9,99.9 L339.2,97.3 L346.5,94.0 L353.7,96.5 L361.0,100.7 L368.3,104.1 L375.5,101.6 L382.8,98.2 L390.1,94.8 L397.3,97.3 L404.6,101.6 L411.9,105.0 L419.1,102.4 L426.4,99.0 L433.7,95.7 L440.9,98.2 L448.2,101.6 L455.5,99.9 L462.7,97.3 L470.0,99.9"/>
+              <path class="ch-cross" d="M208.4,12V350"/>
+              <circle class="ch-dot" cx="208.4" cy="107.5" r="5"/>
+              <circle class="ch-dot" cx="470" cy="99.9" r="5"/>
+              <text class="ch-end" x="480" y="104">29,6</text>
+            </svg>
+            <div class="tip" style="left: 218px; top: 46px"><b>28,7 FPS</b> · 12. saniye</div>
+          </div>
+        </section>
+        <section class="card flexcol" style="width: 420px; flex: none">
+          <div class="card-h">
+            <span class="ic" aria-hidden="true">&#xE815;</span>
+            <h2 class="card-t">Doğruluk testi</h2>
+            <div class="end"><span class="pill info"><span class="pill-dot"></span>SÜRÜYOR</span></div>
+          </div>
+          <p class="cap">Hedef ≥ %90 doğru tıklama</p>
+          <div style="display: flex; align-items: center; gap: 10px; margin-top: 12px">
+            <div class="seg" role="group" aria-label="Test edilen hareket">
+              <button type="button" class="on" aria-pressed="true">Sol tık</button>
+              <button type="button" aria-pressed="false">Sağ tık</button>
+              <button type="button" aria-pressed="false">Karışık</button>
+            </div>
+            <button type="button" class="sel" aria-haspopup="listbox" aria-label="Deneme sayısı: 20" style="min-width: 0; flex: 1">20 deneme<span class="ic" aria-hidden="true">&#xE70D;</span></button>
+          </div>
+          <div style="margin-top: 14px; padding: 14px; border-radius: 10px; background: var(--viewport); display: flex; flex-direction: column; gap: 12px" role="status" aria-live="polite">
+            <div style="display: flex; align-items: center; gap: 14px">
+              <img src="./art/g_left.svg" alt="" style="width: 140px; aspect-ratio: 5 / 3; border-radius: 8px; border: 1px solid rgba(248,250,252,.12)">
+              <div style="display: flex; flex-direction: column; gap: 2px">
+                <span style="font-size: 12px; color: #CBD5E1">Şimdi yapın</span>
+                <span style="font-size: 26px; font-weight: 600; line-height: 1.2; color: #F8FAFC">Sol tık</span>
+                <span style="font-size: 13px; color: #CBD5E1">Deneme 7 / 20</span>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px">
+              <div class="pb" style="flex: 1; background: #1E293B"><span style="width: 70%; background: #22D3EE"></span></div>
+              <span style="font-size: 12px; color: #CBD5E1; white-space: nowrap">2,1 sn kaldı</span>
+            </div>
+          </div>
+          <h3 class="lbl" style="margin: 16px 0 8px">Denemeler</h3>
+          <ol aria-label="Deneme sonuçları" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(10, 26px); gap: 8px 10px">
+            <li class="ic" title="1: doğru" style="width: 26px; height: 26px; border-radius: 50%; background: var(--success-tint); color: var(--success-text); font-size: 11px">&#xE73E;</li>
+            <li class="ic" title="2: doğru" style="width: 26px; height: 26px; border-radius: 50%; background: var(--success-tint); color: var(--success-text); font-size: 11px">&#xE73E;</li>
+            <li class="ic" title="3: doğru" style="width: 26px; height: 26px; border-radius: 50%; background: var(--success-tint); color: var(--success-text); font-size: 11px">&#xE73E;</li>
+            <li class="ic" title="4: doğru" style="width: 26px; height: 26px; border-radius: 50%; background: var(--success-tint); color: var(--success-text); font-size: 11px">&#xE73E;</li>
+            <li class="ic" title="5: doğru" style="width: 26px; height: 26px; border-radius: 50%; background: var(--success-tint); color: var(--success-text); font-size: 11px">&#xE73E;</li>
+            <li class="ic" title="6: doğru" style="width: 26px; height: 26px; border-radius: 50%; background: var(--success-tint); color: var(--success-text); font-size: 11px">&#xE73E;</li>
+            <li title="7: sürüyor" style="width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--primary); color: var(--text); font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center">7</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">8</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">9</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">10</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">11</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">12</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">13</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">14</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">15</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">16</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">17</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">18</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">19</li>
+            <li style="width: 26px; height: 26px; border-radius: 50%; background: var(--muted); color: var(--text3); font-size: 11px; display: flex; align-items: center; justify-content: center">20</li>
+          </ol>
+          <div class="mstats" style="margin-top: 16px">
+            <div class="mstat"><b>6</b><span>Doğru</span></div>
+            <div class="mstat"><b>0</b><span>Yanlış</span></div>
+            <div class="mstat"><b>0</b><span>Kaçan</span></div>
+            <div class="mstat"><b>%100</b><span>Şu ana kadar</span></div>
+          </div>
+          <p class="cap" style="display: flex; gap: 8px; margin-top: 14px; font-size: 13px; line-height: 1.45"><span class="ic" aria-hidden="true" style="font-size: 14px; margin-top: 2px">&#xE946;</span>Her istemde hareketi bir kez yapın. 3 saniye içinde algılanmazsa deneme "kaçan" sayılır; başka bir hareket algılanırsa "yanlış" sayılır.</p>
+          <button type="button" class="btn btn-sec btn-full" style="margin-top: auto"><span class="ic" aria-hidden="true">&#xE71A;</span>Testi durdur</button>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

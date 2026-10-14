@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Tasarım sistemi</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./jk.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="jk" style="height: 2420px">
+  <div style="display: flex; flex-direction: column; gap: 24px; padding: 36px 48px">
+    <header style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+      <div>
+        <h1 style="font-size: 28px; font-weight: 600; line-height: 1.25">JestKontrol tasarım sistemi</h1>
+        <p class="sub" style="max-width: 760px">CustomTkinter ile birebir uygulanabilir: düz renkler, yuvarlak köşeler ve standart bileşenler. Tüm değerler design/tokens.json dosyasında; Python tarafı aynı dosyayı okur.</p>
+      </div>
+      <span class="badge neutral">Sürüm 0.1 · Ekim 2026</span>
+    </header>
+
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 250px; gap: 24px; align-items: start">
+      <section class="card">
+        <div class="card-h"><h2 class="card-t">Koyu tema (varsayılan)</h2></div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px">
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #0F172A; border: 1px solid var(--border)"></span><div><div style="font-size: 13px; font-weight: 600">bg</div><div class="cap mono">#0F172A</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #0B1222; border: 1px solid var(--border)"></span><div><div style="font-size: 13px; font-weight: 600">nav</div><div class="cap mono">#0B1222</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #1B2336; border: 1px solid var(--border)"></span><div><div style="font-size: 13px; font-weight: 600">card</div><div class="cap mono">#1B2336</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #272F42; border: 1px solid var(--border)"></span><div><div style="font-size: 13px; font-weight: 600">muted</div><div class="cap mono">#272F42</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #334155"></span><div><div style="font-size: 13px; font-weight: 600">border</div><div class="cap mono">#334155</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #64748B"></span><div><div style="font-size: 13px; font-weight: 600">field_border</div><div class="cap mono">#64748B</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #F8FAFC"></span><div><div style="font-size: 13px; font-weight: 600">text</div><div class="cap mono">#F8FAFC</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #94A3B8"></span><div><div style="font-size: 13px; font-weight: 600">text_muted</div><div class="cap mono">#94A3B8</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #22D3EE"></span><div><div style="font-size: 13px; font-weight: 600">primary</div><div class="cap mono">#22D3EE</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #22C55E"></span><div><div style="font-size: 13px; font-weight: 600">success</div><div class="cap mono">#22C55E</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #FBBF24"></span><div><div style="font-size: 13px; font-weight: 600">warning</div><div class="cap mono">#FBBF24</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #F87171"></span><div><div style="font-size: 13px; font-weight: 600">danger</div><div class="cap mono">#F87171</div></div></div>
+        </div>
+      </section>
+      <section class="card light-scope">
+        <div class="card-h"><h2 class="card-t">Açık tema</h2></div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px">
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #F1F5F9; border: 1px solid var(--border)"></span><div><div style="font-size: 13px; font-weight: 600">bg</div><div class="cap mono">#F1F5F9</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #F8FAFC; border: 1px solid var(--border)"></span><div><div style="font-size: 13px; font-weight: 600">nav</div><div class="cap mono">#F8FAFC</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #FFFFFF; border: 1px solid var(--border)"></span><div><div style="font-size: 13px; font-weight: 600">card</div><div class="cap mono">#FFFFFF</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #E2E8F0"></span><div><div style="font-size: 13px; font-weight: 600">muted</div><div class="cap mono">#E2E8F0</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #CBD5E1"></span><div><div style="font-size: 13px; font-weight: 600">border</div><div class="cap mono">#CBD5E1</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #7C8BA1"></span><div><div style="font-size: 13px; font-weight: 600">field_border</div><div class="cap mono">#7C8BA1</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #0F172A"></span><div><div style="font-size: 13px; font-weight: 600">text</div><div class="cap mono">#0F172A</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #475569"></span><div><div style="font-size: 13px; font-weight: 600">text_muted</div><div class="cap mono">#475569</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #0E7490"></span><div><div style="font-size: 13px; font-weight: 600">primary</div><div class="cap mono">#0E7490</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #15803D"></span><div><div style="font-size: 13px; font-weight: 600">success</div><div class="cap mono">#15803D</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #B45309"></span><div><div style="font-size: 13px; font-weight: 600">warning</div><div class="cap mono">#B45309</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #B91C1C"></span><div><div style="font-size: 13px; font-weight: 600">danger</div><div class="cap mono">#B91C1C</div></div></div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-h"><h2 class="card-t">Kamera görüntüsü</h2></div>
+        <p class="cap" style="margin-bottom: 12px">İki temada da aynı; PIL ile kareye çizilir.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #020617; border: 1px solid var(--border)"></span><div><div style="font-size: 13px; font-weight: 600">viewport</div><div class="cap mono">#020617</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #22D3EE"></span><div><div style="font-size: 13px; font-weight: 600">skeleton</div><div class="cap mono">#22D3EE</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #FBBF24"></span><div><div style="font-size: 13px; font-weight: 600">highlight</div><div class="cap mono">#FBBF24</div></div></div>
+          <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 8px; background: #64748B"></span><div><div style="font-size: 13px; font-weight: 600">skeleton_paused</div><div class="cap mono">#64748B</div></div></div>
+        </div>
+        <p class="cap" style="margin-top: 14px">Tüm metin çiftleri ≥ 4.5:1, bileşen kenarları ≥ 3:1 kontrastta ölçüldü.</p>
+      </section>
+    </div>
+
+    <div style="display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 24px; align-items: start">
+      <section class="card">
+        <div class="card-h"><h2 class="card-t">Yazı</h2><div class="end"><span class="cap">Segoe UI · simgeler Segoe Fluent Icons</span></div></div>
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 190px; row-gap: 12px; column-gap: 16px; align-items: baseline">
+          <span style="font-size: 24px; font-weight: 600">Kontrol Paneli</span><span class="cap">Sayfa başlığı · 24 Semibold</span>
+          <span style="font-size: 16px; font-weight: 600">Kamera önizlemesi</span><span class="cap">Kart başlığı · 16 Semibold</span>
+          <span style="font-size: 14px">Değişiklikler hemen uygulanır.</span><span class="cap">Gövde · 14 Regular</span>
+          <span class="lbl">Çalışma modu</span><span class="cap">Etiket · 12 Semibold</span>
+          <span class="cap">her 0,5 sn güncellenir</span><span class="cap">Açıklama · 12 Regular</span>
+          <span style="font-size: 22px; font-weight: 600">29,4</span><span class="cap">Değer · 22 Semibold</span>
+          <span><kbd class="kbd">Ctrl+Alt+G</kbd></span><span class="cap">Kısayol · Cascadia Mono 12</span>
+        </div>
+        <p class="cap" style="margin-top: 14px">Türkçe arayüzde ondalık ayırıcı virgül (29,4) ve yüzde işareti önde (%60); İngilizcede 29.4 ve 60%.</p>
+      </section>
+      <section class="card">
+        <div class="card-h"><h2 class="card-t">Boşluk ve köşeler</h2></div>
+        <div style="display: flex; align-items: flex-end; gap: 14px">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="width: 4px; height: 4px; background: var(--primary)"></span><span class="cap">4</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="width: 8px; height: 8px; background: var(--primary)"></span><span class="cap">8</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; background: var(--primary)"></span><span class="cap">12</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="width: 16px; height: 16px; background: var(--primary)"></span><span class="cap">16</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="width: 24px; height: 24px; background: var(--primary)"></span><span class="cap">24</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="width: 32px; height: 32px; background: var(--primary)"></span><span class="cap">32</span></div>
+        </div>
+        <div class="divider" style="margin: 16px 0"></div>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px">
+          <div style="display: flex; flex-direction: column; gap: 6px"><span style="height: 44px; border-radius: 6px; background: var(--muted); border: 1px solid var(--field)"></span><span class="cap">Alan · 6</span></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><span style="height: 44px; border-radius: 8px; background: var(--primary)"></span><span class="cap">Düğme · 8</span></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><span style="height: 44px; border-radius: 10px; background: var(--bg); border: 1px solid var(--border)"></span><span class="cap">Kutucuk · 10</span></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><span style="height: 44px; border-radius: 12px; background: var(--muted)"></span><span class="cap">Kart · 12</span></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><span style="height: 44px; border-radius: 999px; background: var(--muted)"></span><span class="cap">Hap · tam</span></div>
+        </div>
+        <p class="cap" style="margin-top: 14px">Pencere 1280 × 768 (en küçük 1100 × 680) · yan menü 232 · sağ sütun 340 · menü öğesi 44 · büyük düğme 48.</p>
+      </section>
+    </div>
+
+    <section class="card">
+      <div class="card-h"><h2 class="card-t">Bileşenler</h2><div class="end"><span class="cap">Her biri bir CTk bileşenine karşılık gelir</span></div></div>
+      <h3 class="lbl" style="margin-bottom: 10px">Düğmeler · CTkButton</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 20px; align-items: flex-start">
+        <div style="display: flex; flex-direction: column; gap: 6px"><button type="button" class="btn btn-lg btn-success"><span class="ic" aria-hidden="true">&#xE768;</span>Başlat</button><span class="cap">Başlat · 48</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><button type="button" class="btn btn-lg btn-danger"><span class="ic" aria-hidden="true">&#xE71A;</span>Durdur</button><span class="cap">Durdur · 48</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><button type="button" class="btn btn-lg btn-sec"><span class="ic" aria-hidden="true">&#xE769;</span>Duraklat</button><span class="cap">İkincil · 48</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><button type="button" class="btn btn-primary">Tekrar dene</button><span class="cap">Birincil · 40</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><button type="button" class="btn btn-sec hover">Varsayılana dön</button><span class="cap">Üzerine gelince</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><button type="button" class="btn btn-primary focus">Klavye odağı</button><span class="cap">Odak halkası · 2 px</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><button type="button" class="btn" disabled>Pasif</button><span class="cap">Pasif</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><button type="button" class="btn btn-ghost">Tüm ayarlar</button><span class="cap">Bağlantı</span></div>
+      </div>
+      <div class="divider" style="margin: 18px 0"></div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px">
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <h3 class="lbl">Seçim kontrolleri</h3>
+          <div class="seg full lg" role="group" aria-label="Örnek mod"><button type="button" class="on" aria-pressed="true">Fare</button><button type="button" aria-pressed="false">Kaydırma</button><button type="button" aria-pressed="false">Ses</button></div>
+          <button type="button" class="sel" aria-haspopup="listbox" aria-label="Kamera: HD Webcam">HD Webcam<span class="ic" aria-hidden="true">&#xE70D;</span></button>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap">
+            <label class="sw on"><input class="vh" type="checkbox" role="switch" checked><span class="sw-t"></span>Açık</label>
+            <label class="sw"><input class="vh" type="checkbox" role="switch"><span class="sw-t"></span>Kapalı</label>
+            <label class="sw on dis"><input class="vh" type="checkbox" role="switch" checked disabled><span class="sw-t"></span>Pasif</label>
+          </div>
+          <div class="slr" style="grid-template-columns: 90px minmax(0, 1fr) 44px"><label for="ds-s">Hassasiyet</label><div class="sl"><span class="sl-fill" style="width: 47%"></span><span class="sl-knob" style="left: 47%"></span><input class="vh" id="ds-s" type="range" min="0.5" max="2" step="0.1" value="1.2"></div><span class="slv">1,2×</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <h3 class="lbl">Durum · renk + şekil + metin</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <span class="pill off"><span class="pill-dot"></span>KAPALI</span>
+            <span class="pill ok"><span class="pill-dot"></span>AKTİF</span>
+            <span class="pill warn"><span class="ic" aria-hidden="true">&#xE769;</span>DURAKLATILDI</span>
+            <span class="pill info"><span class="pill-dot"></span>SÜRÜYOR</span>
+            <span class="pill err"><span class="ic" aria-hidden="true">&#xE783;</span>HATA</span>
+          </div>
+          <h3 class="lbl" style="margin-top: 4px">Hareket çipleri</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <span class="chip"><span class="ic" aria-hidden="true">&#xE8B0;</span>İmleç</span>
+            <span class="chip on"><span class="ic" aria-hidden="true">&#xE815;</span>Sol tık</span>
+            <span class="chip"><span class="ic" aria-hidden="true">&#xE7C2;</span>Sürükle</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px"><kbd class="kbd">Ctrl+Alt+G</kbd><span class="cap">kısayol etiketi</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <h3 class="lbl">Gezinme ve değer kutucuğu</h3>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 8px; border-radius: 10px; background: var(--nav); border: 1px solid var(--border)">
+            <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xED5F;</span>Normal</button>
+            <button type="button" class="nav-item hover"><span class="ic" aria-hidden="true">&#xE713;</span>Üzerine gelince</button>
+            <button type="button" class="nav-item on" aria-current="page"><span class="ic" aria-hidden="true">&#xE80F;</span>Seçili</button>
+          </div>
+          <div class="stat"><span class="stat-l"><span class="ic" aria-hidden="true">&#xEC4A;</span>FPS</span><span class="stat-v">29,4</span><span class="stat-s"><span class="ic t-ok" aria-hidden="true">&#xE73E;</span>Hedef ≥ 25</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-h"><h2 class="card-t">Kamera önizlemesi durumları</h2></div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px">
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
+          <div style="position: relative; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: #020617; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #E2E8F0"><span class="ic" aria-hidden="true" style="font-size: 22px">&#xE714;</span><span style="font-size: 12px">Kamera kapalı</span></div>
+          <figcaption class="cap"><b style="color: var(--text)">Kapalı</b> · başlangıç adımları gösterilir</figcaption>
+        </figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
+          <div style="position: relative; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: #020617"><img src="./art/scene_active_tr.svg" alt="Aktif önizleme" style="display: block; width: 100%; height: 100%; object-fit: cover"><span class="vchip bl" style="height: 22px; padding: 0 8px; font-size: 11px; bottom: 8px; left: 8px"><span class="vdot" style="width: 7px; height: 7px"></span>Sol tık</span></div>
+          <figcaption class="cap"><b style="color: var(--text)">Aktif</b> · iskelet ve algılanan hareket</figcaption>
+        </figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
+          <div style="position: relative; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: #020617"><img src="./art/scene_empty_tr.svg" alt="El görünmüyor" style="display: block; width: 100%; height: 100%; object-fit: cover"><span class="vchip" style="height: 22px; padding: 0 8px; font-size: 11px; left: 50%; top: 50%; transform: translate(-50%, -50%)"><span class="ic" aria-hidden="true" style="font-size: 11px; color: #FCD34D">&#xED5F;</span>El algılanmadı</span></div>
+          <figcaption class="cap"><b style="color: var(--text)">El yok</b> · elinizi aktif alana getirin</figcaption>
+        </figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
+          <div style="position: relative; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: #020617"><img src="./art/scene_paused_tr.svg" alt="Duraklatılmış önizleme" style="display: block; width: 100%; height: 100%; object-fit: cover"><div class="vp-over dim" style="padding: 8px"><span class="ic" aria-hidden="true" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(248,250,252,.08); border: 1px solid rgba(248,250,252,.14); font-size: 14px">&#xE769;</span></div></div>
+          <figcaption class="cap"><b style="color: var(--text)">Duraklatıldı</b> · iskelet gri, komut yok</figcaption>
+        </figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
+          <div style="position: relative; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: #020617; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #E2E8F0"><span class="ic" aria-hidden="true" style="font-size: 22px; color: #FCA5A5">&#xE783;</span><span style="font-size: 12px">Kamera bağlantısı yok</span></div>
+          <figcaption class="cap"><b style="color: var(--text)">Hata</b> · nedeni ve çözümü diyalogda</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div style="display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: 24px; align-items: start">
+      <section class="card">
+        <div class="card-h"><h2 class="card-t">El noktaları</h2><div class="end"><span class="cap">MediaPipe · 21 nokta</span></div></div>
+        <img src="./art/landmarks.svg" alt="Açık el üzerinde 0'dan 20'ye numaralı 21 nokta: 0 bilek, 4 başparmak ucu, 8 işaret ucu, 12 orta parmak ucu, 16 yüzük parmağı ucu, 20 serçe parmak ucu" style="display: block; width: 100%; border-radius: 10px">
+        <p class="cap" style="margin-top: 10px">0 bilek · 4 başparmak · 8 işaret · 12 orta · 16 yüzük · 20 serçe (uçlar)</p>
+      </section>
+      <section class="card">
+        <div class="card-h"><h2 class="card-t">Hareket ve nokta eşlemesi</h2><div class="end"><span class="badge neutral">Taslak</span></div></div>
+        <table class="tbl" style="white-space: normal">
+          <thead><tr><th scope="col">Hareket</th><th scope="col">Kimlik</th><th scope="col">Noktalar</th><th scope="col">Kural</th></tr></thead>
+          <tbody>
+            <tr><td class="strong">İmleç</td><td class="mono" style="font-size: 12px">move</td><td class="num">8</td><td style="white-space: normal">Uç konumu aktif alana göre ekrana ölçeklenir, üstel yumuşatma uygulanır</td></tr>
+            <tr><td class="strong">Sol tık</td><td class="mono" style="font-size: 12px">left_click</td><td class="num">4 ↔ 8</td><td style="white-space: normal">Mesafe &lt; eşik × avuç boyu (0 ↔ 9)</td></tr>
+            <tr><td class="strong">Sağ tık</td><td class="mono" style="font-size: 12px">right_click</td><td class="num">4 ↔ 12</td><td style="white-space: normal">Mesafe &lt; eşik × avuç boyu</td></tr>
+            <tr><td class="strong">Sürükle</td><td class="mono" style="font-size: 12px">drag</td><td class="num">4 ↔ 8</td><td style="white-space: normal">Sol tık 0,3 sn'den uzun tutulur; ayrılınca bırakılır</td></tr>
+            <tr><td class="strong">Kaydırma</td><td class="mono" style="font-size: 12px">scroll</td><td class="num">8, 12</td><td style="white-space: normal">İki parmak açık; dikey hareket kaydırmaya dönüşür</td></tr>
+            <tr><td class="strong">Ses</td><td class="mono" style="font-size: 12px">volume</td><td class="num">4 ↔ 8</td><td style="white-space: normal">Mesafe aralığı ses %0–100'e eşlenir</td></tr>
+            <tr><td class="strong">Duraklat</td><td class="mono" style="font-size: 12px">pause</td><td class="num">5–20</td><td style="white-space: normal">Tüm parmaklar kapalı, 1 sn tutulur</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <section class="card">
+      <div class="card-h"><h2 class="card-t">Simgeler</h2><div class="end"><span class="cap">Segoe Fluent Icons (Windows 11) · yedek: Segoe MDL2 Assets (Windows 10)</span></div></div>
+      <div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 10px">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE80F;</span><span class="cap">Panel</span><span class="cap mono" style="font-size: 11px">E80F</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xED5F;</span><span class="cap">El</span><span class="cap mono" style="font-size: 11px">ED5F</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE713;</span><span class="cap">Ayarlar</span><span class="cap mono" style="font-size: 11px">E713</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE9D9;</span><span class="cap">Test</span><span class="cap mono" style="font-size: 11px">E9D9</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE946;</span><span class="cap">Bilgi</span><span class="cap mono" style="font-size: 11px">E946</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE768;</span><span class="cap">Başlat</span><span class="cap mono" style="font-size: 11px">E768</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE769;</span><span class="cap">Duraklat</span><span class="cap mono" style="font-size: 11px">E769</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE71A;</span><span class="cap">Durdur</span><span class="cap mono" style="font-size: 11px">E71A</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xEE49;</span><span class="cap">Mini</span><span class="cap mono" style="font-size: 11px">EE49</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE740;</span><span class="cap">Genişlet</span><span class="cap mono" style="font-size: 11px">E740</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE714;</span><span class="cap">Kamera</span><span class="cap mono" style="font-size: 11px">E714</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE962;</span><span class="cap">Fare</span><span class="cap mono" style="font-size: 11px">E962</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE8CB;</span><span class="cap">Kaydırma</span><span class="cap mono" style="font-size: 11px">E8CB</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE767;</span><span class="cap">Ses</span><span class="cap mono" style="font-size: 11px">E767</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE8B0;</span><span class="cap">İmleç</span><span class="cap mono" style="font-size: 11px">E8B0</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE815;</span><span class="cap">Tık</span><span class="cap mono" style="font-size: 11px">E815</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE7C2;</span><span class="cap">Sürükle</span><span class="cap mono" style="font-size: 11px">E7C2</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xEC4A;</span><span class="cap">FPS</span><span class="cap mono" style="font-size: 11px">EC4A</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xE916;</span><span class="cap">Gecikme</span><span class="cap mono" style="font-size: 11px">E916</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 8px; background: var(--bg)"><span class="ic" aria-hidden="true" style="font-size: 20px">&#xEDE1;</span><span class="cap">Dışa aktar</span><span class="cap mono" style="font-size: 11px">EDE1</span></div>
+      </div>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":2420}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

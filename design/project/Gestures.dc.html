@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Hareketler</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./jk.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="jk">
+  <div class="tb">
+    <div class="tb-app"><span class="ic tb-logo" aria-hidden="true">&#xED5F;</span><span>JestKontrol</span></div>
+    <div class="tb-ctl" aria-hidden="true"><span class="ic">&#xE921;</span><span class="ic">&#xE922;</span><span class="ic">&#xE8BB;</span></div>
+  </div>
+  <div class="shell">
+    <nav class="side" aria-label="Ana menü">
+      <div class="brand">
+        <span class="ic brand-mark" aria-hidden="true">&#xED5F;</span>
+        <div><div class="brand-name">JestKontrol</div><div class="brand-sub">El hareketiyle kontrol</div></div>
+      </div>
+      <div class="nav">
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE80F;</span>Kontrol Paneli</button>
+        <button type="button" class="nav-item on" aria-current="page"><span class="ic" aria-hidden="true">&#xED5F;</span>Hareketler</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE713;</span>Ayarlar</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE9D9;</span>Test ve Performans</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE946;</span>Hakkında</button>
+      </div>
+      <div class="side-foot">
+        <div class="estop"><span>Acil durdurma</span><kbd class="kbd">Ctrl+Alt+G</kbd></div>
+        <div class="side-row">
+          <div class="seg" role="group" aria-label="Dil"><button type="button" class="on" aria-pressed="true">TR</button><button type="button" aria-pressed="false">EN</button></div>
+          <button type="button" class="icon-btn" aria-label="Açık temaya geç"><span class="ic" aria-hidden="true">&#xE706;</span></button>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <header class="head">
+        <div>
+          <h1 class="h1">Hareketler</h1>
+          <p class="sub">Sistemin tanıdığı el hareketleri. Kullanmadıklarınızı kapatabilirsiniz.</p>
+        </div>
+        <div class="head-act">
+          <div class="seg lg" role="group" aria-label="Moda göre filtrele">
+            <button type="button" class="on" aria-pressed="true">Tümü</button>
+            <button type="button" aria-pressed="false">Fare</button>
+            <button type="button" aria-pressed="false">Kaydırma</button>
+            <button type="button" aria-pressed="false">Ses</button>
+            <button type="button" aria-pressed="false">Genel</button>
+          </div>
+        </div>
+      </header>
+      <div class="body" style="flex-direction: column; gap: 16px">
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+          <article class="card" style="display: flex; flex-direction: column; gap: 10px; padding: 12px">
+            <img src="./art/g_move.svg" alt="İşaret parmağı yukarıda, parmak ucunda hedef işareti" style="display: block; width: 100%; aspect-ratio: 5 / 3; border-radius: 8px">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><h2 style="font-size: 15px; font-weight: 600">İmleç hareketi</h2><span class="badge">Fare</span></div>
+            <p class="cap" style="font-size: 13px; line-height: 1.45; min-height: 57px">İşaret parmağınızı kaldırın; parmak ucunuz imleci taşır.</p>
+            <label class="sw on dis"><input class="vh" type="checkbox" role="switch" checked disabled><span class="sw-t"></span>Her zaman açık</label>
+          </article>
+          <article class="card" style="display: flex; flex-direction: column; gap: 10px; padding: 12px">
+            <img src="./art/g_left.svg" alt="Başparmak ile işaret parmağının uçları birleşmiş" style="display: block; width: 100%; aspect-ratio: 5 / 3; border-radius: 8px">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><h2 style="font-size: 15px; font-weight: 600">Sol tık</h2><span class="badge">Fare</span></div>
+            <p class="cap" style="font-size: 13px; line-height: 1.45; min-height: 57px">Başparmak ile işaret parmağının uçlarını kısa süre birleştirin.</p>
+            <label class="sw on"><input class="vh" type="checkbox" role="switch" checked><span class="sw-t"></span>Etkin</label>
+          </article>
+          <article class="card" style="display: flex; flex-direction: column; gap: 10px; padding: 12px">
+            <img src="./art/g_right.svg" alt="Başparmak ile orta parmağın uçları birleşmiş, işaret parmağı yukarıda" style="display: block; width: 100%; aspect-ratio: 5 / 3; border-radius: 8px">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><h2 style="font-size: 15px; font-weight: 600">Sağ tık</h2><span class="badge">Fare</span></div>
+            <p class="cap" style="font-size: 13px; line-height: 1.45; min-height: 57px">Başparmak ile orta parmağın uçlarını kısa süre birleştirin.</p>
+            <label class="sw on"><input class="vh" type="checkbox" role="switch" checked><span class="sw-t"></span>Etkin</label>
+          </article>
+          <article class="card" style="display: flex; flex-direction: column; gap: 10px; padding: 12px">
+            <img src="./art/g_drag.svg" alt="Birleşik parmak uçları ve hareket yönünü gösteren kesikli ok" style="display: block; width: 100%; aspect-ratio: 5 / 3; border-radius: 8px">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><h2 style="font-size: 15px; font-weight: 600">Sürükle ve bırak</h2><span class="badge">Fare</span></div>
+            <p class="cap" style="font-size: 13px; line-height: 1.45; min-height: 57px">Sol tık hareketini basılı tutup elinizi taşıyın; parmakları ayırınca bırakılır.</p>
+            <label class="sw on"><input class="vh" type="checkbox" role="switch" checked><span class="sw-t"></span>Etkin</label>
+          </article>
+          <article class="card" style="display: flex; flex-direction: column; gap: 10px; padding: 12px">
+            <img src="./art/g_scroll.svg" alt="İşaret ve orta parmak yukarıda, yanında yukarı ve aşağı ok" style="display: block; width: 100%; aspect-ratio: 5 / 3; border-radius: 8px">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><h2 style="font-size: 15px; font-weight: 600">Kaydırma</h2><span class="badge">Kaydırma</span></div>
+            <p class="cap" style="font-size: 13px; line-height: 1.45; min-height: 57px">İşaret ve orta parmağı birlikte kaldırıp elinizi yukarı ya da aşağı taşıyın.</p>
+            <label class="sw on"><input class="vh" type="checkbox" role="switch" checked><span class="sw-t"></span>Etkin</label>
+          </article>
+          <article class="card" style="display: flex; flex-direction: column; gap: 10px; padding: 12px">
+            <img src="./art/g_volume.svg" alt="Başparmak ve işaret parmağı açık, aralarında çift yönlü ok ve ses çubukları" style="display: block; width: 100%; aspect-ratio: 5 / 3; border-radius: 8px">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><h2 style="font-size: 15px; font-weight: 600">Ses düzeyi</h2><span class="badge">Ses</span></div>
+            <p class="cap" style="font-size: 13px; line-height: 1.45; min-height: 57px">Başparmak ile işaret parmağı arasındaki mesafe sesi belirler.</p>
+            <label class="sw on"><input class="vh" type="checkbox" role="switch" checked><span class="sw-t"></span>Etkin</label>
+          </article>
+          <article class="card" style="display: flex; flex-direction: column; gap: 10px; padding: 12px">
+            <img src="./art/g_pause_tr.svg" alt="Yumruk yapılmış el ve 1 saniyelik bekleme halkası" style="display: block; width: 100%; aspect-ratio: 5 / 3; border-radius: 8px">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><h2 style="font-size: 15px; font-weight: 600">Duraklat ve devam et</h2><span class="badge neutral">Genel</span></div>
+            <p class="cap" style="font-size: 13px; line-height: 1.45; min-height: 57px">Yumruk yapıp 1 saniye tutun. Kontrol durur; aynı hareketle devam eder.</p>
+            <label class="sw on"><input class="vh" type="checkbox" role="switch" checked><span class="sw-t"></span>Etkin</label>
+          </article>
+        </div>
+        <p class="cap" style="display: flex; align-items: center; gap: 8px; font-size: 13px"><span class="ic t-pri" aria-hidden="true" style="font-size: 15px">&#xEA80;</span>İpucu: Elinizi kameraya dönük ve iyi aydınlatılmış bir yerde tutun; görüntüde başka el olmasın.</p>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

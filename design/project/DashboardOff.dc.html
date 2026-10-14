@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Kontrol Paneli — Kapalı</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./jk.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="jk">
+  <div class="tb">
+    <div class="tb-app"><span class="ic tb-logo" aria-hidden="true">&#xED5F;</span><span>JestKontrol</span></div>
+    <div class="tb-ctl" aria-hidden="true"><span class="ic">&#xE921;</span><span class="ic">&#xE922;</span><span class="ic">&#xE8BB;</span></div>
+  </div>
+  <div class="shell">
+    <nav class="side" aria-label="Ana menü">
+      <div class="brand">
+        <span class="ic brand-mark" aria-hidden="true">&#xED5F;</span>
+        <div><div class="brand-name">JestKontrol</div><div class="brand-sub">El hareketiyle kontrol</div></div>
+      </div>
+      <div class="nav">
+        <button type="button" class="nav-item on" aria-current="page"><span class="ic" aria-hidden="true">&#xE80F;</span>Kontrol Paneli</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xED5F;</span>Hareketler</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE713;</span>Ayarlar</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE9D9;</span>Test ve Performans</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE946;</span>Hakkında</button>
+      </div>
+      <div class="side-foot">
+        <div class="estop"><span>Acil durdurma</span><kbd class="kbd">Ctrl+Alt+G</kbd></div>
+        <div class="side-row">
+          <div class="seg" role="group" aria-label="Dil"><button type="button" class="on" aria-pressed="true">TR</button><button type="button" aria-pressed="false">EN</button></div>
+          <button type="button" class="icon-btn" aria-label="Açık temaya geç"><span class="ic" aria-hidden="true">&#xE706;</span></button>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <header class="head">
+        <div>
+          <h1 class="h1">Kontrol Paneli</h1>
+          <p class="sub">Sistem kapalı. Kamerayı seçip Başlat'a basın.</p>
+        </div>
+      </header>
+      <div class="body">
+        <div class="col col-main">
+          <section class="card flexcol grow">
+            <div class="card-h">
+              <span class="ic" aria-hidden="true">&#xE714;</span>
+              <h2 class="card-t">Kamera önizlemesi</h2>
+              <div class="end"><span class="pill off"><span class="pill-dot"></span>KAPALI</span><span class="cap">HD Webcam · 640×480</span></div>
+            </div>
+            <div class="vp fill">
+              <div class="vp-over">
+                <span class="ic vp-icon" aria-hidden="true">&#xE714;</span>
+                <div>
+                  <h3 class="vp-title">Kamera kapalı</h3>
+                  <p class="vp-text" style="margin-top: 4px">Başlamak için üç adım yeterli.</p>
+                </div>
+                <ol style="list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; width: 100%; max-width: 540px; text-align: left">
+                  <li style="display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 10px; background: rgba(248,250,252,.05); border: 1px solid rgba(248,250,252,.12)">
+                    <span style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid rgba(248,250,252,.4); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600">1</span>
+                    <span style="font-size: 14px; font-weight: 600; color: #F8FAFC">Kamerayı seçin</span>
+                    <span style="display: inline-flex; align-items: center; justify-content: space-between; height: 30px; padding: 0 10px; border-radius: 6px; border: 1px solid rgba(248,250,252,.28); font-size: 13px; color: #E2E8F0">HD Webcam<span class="ic" aria-hidden="true" style="font-size: 10px">&#xE70D;</span></span>
+                  </li>
+                  <li style="display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 10px; background: rgba(248,250,252,.05); border: 1px solid rgba(248,250,252,.12)">
+                    <span style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid rgba(248,250,252,.4); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600">2</span>
+                    <span style="font-size: 14px; font-weight: 600; color: #F8FAFC">Başlat'a basın</span>
+                    <span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #CBD5E1">veya <span class="vkbd">Ctrl+Alt+G</span></span>
+                  </li>
+                  <li style="display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 10px; background: rgba(248,250,252,.05); border: 1px solid rgba(248,250,252,.12)">
+                    <span style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid rgba(248,250,252,.4); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600">3</span>
+                    <span style="font-size: 14px; font-weight: 600; color: #F8FAFC">İşaret parmağınızı kaldırın</span>
+                    <span style="font-size: 12px; color: #CBD5E1">İmleç parmak ucunuzu izler.</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="strip">
+              <span class="cap">Bu modda:</span>
+              <span class="chip"><span class="ic" aria-hidden="true">&#xE8B0;</span>İmleç</span>
+              <span class="chip"><span class="ic" aria-hidden="true">&#xE815;</span>Sol tık</span>
+              <span class="chip"><span class="ic" aria-hidden="true">&#xE815;</span>Sağ tık</span>
+              <span class="chip"><span class="ic" aria-hidden="true">&#xE7C2;</span>Sürükle ve bırak</span>
+              <a class="link" href="#">Tüm hareketler<span class="ic" aria-hidden="true">&#xE76C;</span></a>
+            </div>
+          </section>
+          <section class="card slim" aria-label="Son olaylar">
+            <div class="events">
+              <span class="lbl"><span class="ic" aria-hidden="true">&#xE81C;</span>Son olaylar</span>
+              <span class="cap" style="font-size: 13px">Henüz olay yok. Sistem başlayınca burada görünür.</span>
+            </div>
+          </section>
+        </div>
+        <div class="col col-side">
+          <section class="card">
+            <div class="card-h">
+              <h2 class="card-t">Sistem</h2>
+              <div class="end"><span class="pill off"><span class="pill-dot"></span>KAPALI</span></div>
+            </div>
+            <button type="button" class="btn btn-lg btn-success btn-full"><span class="ic" aria-hidden="true">&#xE768;</span>Başlat</button>
+            <div class="hint" style="margin-top: 12px"><kbd class="kbd">Ctrl+Alt+G</kbd><span>her uygulamada başlatır ve durdurur</span></div>
+            <div class="divider" style="margin: 14px 0"></div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <span class="lbl" id="mode-l">Çalışma modu</span>
+              <div class="seg full lg" role="group" aria-labelledby="mode-l">
+                <button type="button" class="on" aria-pressed="true">Fare</button>
+                <button type="button" aria-pressed="false">Kaydırma</button>
+                <button type="button" aria-pressed="false">Ses</button>
+              </div>
+            </div>
+          </section>
+          <section class="card grow">
+            <div class="card-h">
+              <h2 class="card-t">Canlı değerler</h2>
+              <div class="end"><span class="cap">sistem kapalı</span></div>
+            </div>
+            <div class="stats">
+              <div class="stat"><span class="stat-l"><span class="ic" aria-hidden="true">&#xEC4A;</span>FPS</span><span class="stat-v" style="color: var(--text3)">—</span><span class="stat-s">Hedef ≥ 25</span></div>
+              <div class="stat"><span class="stat-l"><span class="ic" aria-hidden="true">&#xED5F;</span>El</span><span class="stat-v" style="color: var(--text3)">—</span><span class="stat-s">Kamera kapalı</span></div>
+              <div class="stat"><span class="stat-l"><span class="ic" aria-hidden="true">&#xE815;</span>Hareket</span><span class="stat-v" style="color: var(--text3)">—</span><span class="stat-s">Kamera kapalı</span></div>
+              <div class="stat"><span class="stat-l"><span class="ic" aria-hidden="true">&#xE916;</span>Gecikme</span><span class="stat-v" style="color: var(--text3)">—</span><span class="stat-s">Kare başına</span></div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="card-h">
+              <h2 class="card-t">Hızlı ayarlar</h2>
+              <div class="end"><a class="link" href="#">Tüm ayarlar<span class="ic" aria-hidden="true">&#xE76C;</span></a></div>
+            </div>
+            <div class="slr">
+              <label for="q-sens">Hassasiyet</label>
+              <div class="sl"><span class="sl-fill" style="width: 47%"></span><span class="sl-knob" style="left: 47%"></span><input class="vh" id="q-sens" type="range" min="0.5" max="2" step="0.1" value="1.2"></div>
+              <span class="slv">1,2×</span>
+            </div>
+            <div class="slr">
+              <label for="q-smooth">Yumuşatma</label>
+              <div class="sl"><span class="sl-fill" style="width: 63%"></span><span class="sl-knob" style="left: 63%"></span><input class="vh" id="q-smooth" type="range" min="0" max="95" step="5" value="60"></div>
+              <span class="slv">%60</span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

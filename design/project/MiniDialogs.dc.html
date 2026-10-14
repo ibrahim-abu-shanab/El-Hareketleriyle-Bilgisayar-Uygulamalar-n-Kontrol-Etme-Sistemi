@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Mini pencere ve diyaloglar</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./jk.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="jk">
+  <div style="flex: 1; display: flex; flex-direction: column; gap: 32px; padding: 36px 40px">
+    <section style="display: flex; flex-direction: column; gap: 12px">
+      <h2 class="lbl" style="font-size: 13px">Mini pencere · her zaman üstte, sistem çalışırken ana pencerenin yerine geçer</h2>
+      <div style="display: flex; gap: 24px; align-items: flex-start">
+        <div class="mini">
+          <div class="mini-tb"><span style="display: flex; align-items: center; gap: 6px"><span class="ic tb-logo" aria-hidden="true">&#xED5F;</span>JestKontrol</span><span class="ic" aria-hidden="true">&#xE8BB;</span></div>
+          <div class="mini-b">
+            <div class="mini-s">
+              <span class="mini-l t-ok"><span class="pill-dot"></span>AKTİF · Fare</span>
+              <span class="mini-g">Sol tık · 29 FPS</span>
+            </div>
+            <div class="mini-btns">
+              <button type="button" class="icon-btn" aria-label="Duraklat"><span class="ic" aria-hidden="true">&#xE769;</span></button>
+              <button type="button" class="icon-btn danger" aria-label="Durdur"><span class="ic" aria-hidden="true">&#xE71A;</span></button>
+              <button type="button" class="icon-btn" aria-label="Ana pencereyi aç"><span class="ic" aria-hidden="true">&#xE740;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="mini">
+          <div class="mini-tb"><span style="display: flex; align-items: center; gap: 6px"><span class="ic tb-logo" aria-hidden="true">&#xED5F;</span>JestKontrol</span><span class="ic" aria-hidden="true">&#xE8BB;</span></div>
+          <div class="mini-b">
+            <div class="mini-s">
+              <span class="mini-l t-warn"><span class="ic" aria-hidden="true" style="font-size: 11px">&#xE769;</span>DURAKLATILDI · Fare</span>
+              <span class="mini-g">Yumrukla duraklatıldı</span>
+            </div>
+            <div class="mini-btns">
+              <button type="button" class="icon-btn" aria-label="Devam et"><span class="ic" aria-hidden="true">&#xE768;</span></button>
+              <button type="button" class="icon-btn danger" aria-label="Durdur"><span class="ic" aria-hidden="true">&#xE71A;</span></button>
+              <button type="button" class="icon-btn" aria-label="Ana pencereyi aç"><span class="ic" aria-hidden="true">&#xE740;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="light-scope" style="--titlebar: #F8FAFC">
+          <div class="mini">
+            <div class="mini-tb"><span style="display: flex; align-items: center; gap: 6px"><span class="ic tb-logo" aria-hidden="true">&#xED5F;</span>JestKontrol</span><span class="ic" aria-hidden="true">&#xE8BB;</span></div>
+            <div class="mini-b">
+              <div class="mini-s">
+                <span class="mini-l t-ok"><span class="pill-dot"></span>AKTİF · Ses</span>
+                <span class="mini-g">Ses düzeyi %64 · 30 FPS</span>
+              </div>
+              <div class="mini-btns">
+                <button type="button" class="icon-btn" aria-label="Duraklat"><span class="ic" aria-hidden="true">&#xE769;</span></button>
+                <button type="button" class="icon-btn danger" aria-label="Durdur"><span class="ic" aria-hidden="true">&#xE71A;</span></button>
+                <button type="button" class="icon-btn" aria-label="Ana pencereyi aç"><span class="ic" aria-hidden="true">&#xE740;</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="display: flex; flex-direction: column; gap: 12px">
+      <h2 class="lbl" style="font-size: 13px">Diyaloglar · hata nedenini ve çözümü söyler; geri alınamayan işlemden önce onay ister</h2>
+      <div style="display: flex; gap: 24px; align-items: flex-start">
+        <div class="dlg" role="alertdialog" aria-labelledby="d1-t" aria-describedby="d1-x">
+          <div class="dlg-h">
+            <span class="ic dlg-i" aria-hidden="true" style="background: var(--danger-tint); color: var(--danger-text)">&#xE783;</span>
+            <div><h3 class="dlg-t" id="d1-t">Kamera açılamadı</h3><p class="dlg-x" id="d1-x">HD Webcam başka bir uygulama tarafından kullanılıyor olabilir. O uygulamayı kapatın ya da başka bir kamera seçin.</p></div>
+          </div>
+          <div class="dlg-act"><button type="button" class="btn btn-sec">Kamerayı değiştir</button><button type="button" class="btn btn-primary">Tekrar dene</button></div>
+        </div>
+        <div class="dlg" role="alertdialog" aria-labelledby="d2-t" aria-describedby="d2-x">
+          <div class="dlg-h">
+            <span class="ic dlg-i" aria-hidden="true" style="background: var(--warning-tint); color: var(--warning-text)">&#xE777;</span>
+            <div><h3 class="dlg-t" id="d2-t">Varsayılan ayarlara dönülsün mü?</h3><p class="dlg-x" id="d2-x">Hassasiyet, yumuşatma, tıklama eşiği ve diğer tüm ayarlar ilk değerlerine döner. Test geçmişi silinmez.</p></div>
+          </div>
+          <div class="dlg-act"><button type="button" class="btn btn-sec">Vazgeç</button><button type="button" class="btn btn-danger">Varsayılana dön</button></div>
+        </div>
+      </div>
+    </section>
+    <section style="display: flex; flex-direction: column; gap: 12px">
+      <h2 class="lbl" style="font-size: 13px">Bildirimler · ana pencerenin altında 3 saniye görünür</h2>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; max-width: 944px">
+        <div class="toast" role="status"><span class="ic ok" aria-hidden="true">&#xE73E;</span><span>Ayarlar kaydedildi</span></div>
+        <div class="toast" role="status"><span class="ic ok" aria-hidden="true">&#xEDE1;</span><span style="flex: 1; min-width: 0">Sonuçlar dışa aktarıldı: <span class="mono" style="font-size: 13px">jestkontrol_sonuclar.csv</span></span><a class="link" href="#">Klasörü aç</a></div>
+        <div class="toast" role="status"><span class="ic warn" aria-hidden="true">&#xED5F;</span><span>El algılanmadı. Elinizi aktif alana getirin.</span></div>
+        <div class="toast" role="alert"><span class="ic err" aria-hidden="true">&#xE783;</span><span>Kamera bağlantısı kesildi; sistem durduruldu.</span></div>
+      </div>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

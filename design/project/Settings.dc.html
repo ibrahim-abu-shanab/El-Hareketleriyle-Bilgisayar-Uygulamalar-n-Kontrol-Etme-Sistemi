@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Ayarlar</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./jk.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="jk">
+  <div class="tb">
+    <div class="tb-app"><span class="ic tb-logo" aria-hidden="true">&#xED5F;</span><span>JestKontrol</span></div>
+    <div class="tb-ctl" aria-hidden="true"><span class="ic">&#xE921;</span><span class="ic">&#xE922;</span><span class="ic">&#xE8BB;</span></div>
+  </div>
+  <div class="shell">
+    <nav class="side" aria-label="Ana menü">
+      <div class="brand">
+        <span class="ic brand-mark" aria-hidden="true">&#xED5F;</span>
+        <div><div class="brand-name">JestKontrol</div><div class="brand-sub">El hareketiyle kontrol</div></div>
+      </div>
+      <div class="nav">
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE80F;</span>Kontrol Paneli</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xED5F;</span>Hareketler</button>
+        <button type="button" class="nav-item on" aria-current="page"><span class="ic" aria-hidden="true">&#xE713;</span>Ayarlar</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE9D9;</span>Test ve Performans</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE946;</span>Hakkında</button>
+      </div>
+      <div class="side-foot">
+        <div class="estop"><span>Acil durdurma</span><kbd class="kbd">Ctrl+Alt+G</kbd></div>
+        <div class="side-row">
+          <div class="seg" role="group" aria-label="Dil"><button type="button" class="on" aria-pressed="true">TR</button><button type="button" aria-pressed="false">EN</button></div>
+          <button type="button" class="icon-btn" aria-label="Açık temaya geç"><span class="ic" aria-hidden="true">&#xE706;</span></button>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <header class="head">
+        <div>
+          <h1 class="h1">Ayarlar</h1>
+          <p class="sub">Değişiklikler hemen uygulanır ve otomatik kaydedilir.</p>
+        </div>
+        <div class="head-act">
+          <span class="cap t-ok" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600"><span class="ic" aria-hidden="true">&#xE73E;</span>Kaydedildi</span>
+          <button type="button" class="btn btn-sec"><span class="ic" aria-hidden="true">&#xE777;</span>Varsayılana dön</button>
+        </div>
+      </header>
+      <div class="body">
+        <div class="col" style="flex: 1">
+          <section class="card" style="padding: 14px 16px">
+            <div class="card-h"><span class="ic" aria-hidden="true">&#xE722;</span><h2 class="card-t">Kamera</h2></div>
+            <div class="srow"><div><div class="srow-t">Kamera</div><div class="srow-d">Görüntünün alınacağı cihaz</div></div><div class="srow-c"><button type="button" class="sel" aria-haspopup="listbox" aria-label="Kamera: HD Webcam">HD Webcam<span class="ic" aria-hidden="true">&#xE70D;</span></button></div></div>
+            <div class="srow"><div><div class="srow-t">Çözünürlük</div><div class="srow-d">Yüksek çözünürlük FPS'i düşürebilir</div></div><div class="srow-c"><button type="button" class="sel" aria-haspopup="listbox" aria-label="Çözünürlük: 640 × 480">640 × 480<span class="ic" aria-hidden="true">&#xE70D;</span></button></div></div>
+            <div class="srow"><div><div class="srow-t">Görüntüyü aynala</div><div class="srow-d">Ayna gibi doğal hareket</div></div><div class="srow-c"><label class="sw on"><input class="vh" type="checkbox" role="switch" checked aria-label="Görüntüyü aynala"><span class="sw-t"></span>Açık</label></div></div>
+            <div class="srow"><div><div class="srow-t">El iskeletini göster</div><div class="srow-d">Önizlemede 21 noktayı çizer</div></div><div class="srow-c"><label class="sw on"><input class="vh" type="checkbox" role="switch" checked aria-label="El iskeletini göster"><span class="sw-t"></span>Açık</label></div></div>
+          </section>
+          <section class="card" style="padding: 14px 16px">
+            <div class="card-h"><span class="ic" aria-hidden="true">&#xE8B0;</span><h2 class="card-t">İmleç</h2></div>
+            <div class="srow"><div><label class="srow-t" for="s-sens">Hassasiyet</label><div class="srow-d">El hareketine göre imleç hızı</div></div><div class="srow-c"><div class="sl"><span class="sl-fill" style="width: 47%"></span><span class="sl-knob" style="left: 47%"></span><input class="vh" id="s-sens" type="range" min="0.5" max="2" step="0.1" value="1.2"></div><span class="slv">1,2×</span></div></div>
+            <div class="srow"><div><label class="srow-t" for="s-smooth">Yumuşatma</label><div class="srow-d">Titremeyi azaltır; yüksek değer gecikme ekler</div></div><div class="srow-c"><div class="sl"><span class="sl-fill" style="width: 63%"></span><span class="sl-knob" style="left: 63%"></span><input class="vh" id="s-smooth" type="range" min="0" max="95" step="5" value="60"></div><span class="slv">%60</span></div></div>
+            <div class="srow"><div><label class="srow-t" for="s-zone">Aktif alan kenarı</label><div class="srow-d">Kenardan kırpılan pay; daha az el hareketi</div></div><div class="srow-c"><div class="sl"><span class="sl-fill" style="width: 50%"></span><span class="sl-knob" style="left: 50%"></span><input class="vh" id="s-zone" type="range" min="0" max="30" step="1" value="15"></div><span class="slv">%15</span></div></div>
+          </section>
+        </div>
+        <div class="col" style="flex: 1">
+          <section class="card" style="padding: 14px 16px">
+            <div class="card-h"><span class="ic" aria-hidden="true">&#xE815;</span><h2 class="card-t">Hareket algılama</h2></div>
+            <div class="srow"><div><label class="srow-t" for="s-click">Tıklama eşiği</label><div class="srow-d">Parmak uçları arası mesafe, avuç boyuna oranla</div></div><div class="srow-c"><div class="sl"><span class="sl-fill" style="width: 40%"></span><span class="sl-knob" style="left: 40%"></span><input class="vh" id="s-click" type="range" min="10" max="60" step="1" value="30"></div><span class="slv">%30</span></div></div>
+            <div class="srow"><div><label class="srow-t" for="s-cool">Tık bekleme süresi</label><div class="srow-d">Arka arkaya istenmeyen tıkları önler</div></div><div class="srow-c"><div class="sl"><span class="sl-fill" style="width: 22%"></span><span class="sl-knob" style="left: 22%"></span><input class="vh" id="s-cool" type="range" min="100" max="1000" step="50" value="300"></div><span class="slv">300 ms</span></div></div>
+            <div class="srow"><div><div class="srow-t">Sürükle ve bırak</div><div class="srow-d">Tık hareketini tutarak sürükleme</div></div><div class="srow-c"><label class="sw on"><input class="vh" type="checkbox" role="switch" checked aria-label="Sürükle ve bırak"><span class="sw-t"></span>Açık</label></div></div>
+            <div class="srow"><div><label class="srow-t" for="s-scroll">Kaydırma hızı</label><div class="srow-d">Elin hareketine göre kaydırma miktarı</div></div><div class="srow-c"><div class="sl"><span class="sl-fill" style="width: 44%"></span><span class="sl-knob" style="left: 44%"></span><input class="vh" id="s-scroll" type="range" min="1" max="10" step="1" value="5"></div><span class="slv">5</span></div></div>
+            <div class="srow"><div><label class="srow-t" for="s-vol">Ses hassasiyeti</label><div class="srow-d">Parmak mesafesine göre ses değişimi</div></div><div class="srow-c"><div class="sl"><span class="sl-fill" style="width: 33%"></span><span class="sl-knob" style="left: 33%"></span><input class="vh" id="s-vol" type="range" min="0.5" max="2" step="0.1" value="1"></div><span class="slv">1,0×</span></div></div>
+          </section>
+          <section class="card" style="padding: 14px 16px">
+            <div class="card-h"><span class="ic" aria-hidden="true">&#xE713;</span><h2 class="card-t">Genel</h2></div>
+            <div class="srow"><div><div class="srow-t" id="l-lang">Dil</div><div class="srow-d">Arayüz dili hemen değişir</div></div><div class="srow-c"><div class="seg" role="group" aria-labelledby="l-lang"><button type="button" class="on" aria-pressed="true">Türkçe</button><button type="button" aria-pressed="false">English</button></div></div></div>
+            <div class="srow"><div><div class="srow-t" id="l-theme">Tema</div><div class="srow-d">Uygulamanın görünümü</div></div><div class="srow-c"><div class="seg" role="group" aria-labelledby="l-theme"><button type="button" class="on" aria-pressed="true">Koyu</button><button type="button" aria-pressed="false">Açık</button><button type="button" aria-pressed="false">Sistem</button></div></div></div>
+            <div class="srow"><div><div class="srow-t">Arayüz ölçeği</div><div class="srow-d">Yazı ve düğme boyutu</div></div><div class="srow-c"><button type="button" class="sel" aria-haspopup="listbox" aria-label="Arayüz ölçeği: yüzde 100">%100<span class="ic" aria-hidden="true">&#xE70D;</span></button></div></div>
+            <div class="srow"><div><div class="srow-t">Acil durdurma</div><div class="srow-d">Her uygulamada çalışan kısayol</div></div><div class="srow-c"><kbd class="kbd">Ctrl+Alt+G</kbd><button type="button" class="btn btn-sec btn-sm">Değiştir</button></div></div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

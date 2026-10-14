@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Hakkında</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./jk.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="jk">
+  <div class="tb">
+    <div class="tb-app"><span class="ic tb-logo" aria-hidden="true">&#xED5F;</span><span>JestKontrol</span></div>
+    <div class="tb-ctl" aria-hidden="true"><span class="ic">&#xE921;</span><span class="ic">&#xE922;</span><span class="ic">&#xE8BB;</span></div>
+  </div>
+  <div class="shell">
+    <nav class="side" aria-label="Ana menü">
+      <div class="brand">
+        <span class="ic brand-mark" aria-hidden="true">&#xED5F;</span>
+        <div><div class="brand-name">JestKontrol</div><div class="brand-sub">El hareketiyle kontrol</div></div>
+      </div>
+      <div class="nav">
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE80F;</span>Kontrol Paneli</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xED5F;</span>Hareketler</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE713;</span>Ayarlar</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE9D9;</span>Test ve Performans</button>
+        <button type="button" class="nav-item on" aria-current="page"><span class="ic" aria-hidden="true">&#xE946;</span>Hakkında</button>
+      </div>
+      <div class="side-foot">
+        <div class="estop"><span>Acil durdurma</span><kbd class="kbd">Ctrl+Alt+G</kbd></div>
+        <div class="side-row">
+          <div class="seg" role="group" aria-label="Dil"><button type="button" class="on" aria-pressed="true">TR</button><button type="button" aria-pressed="false">EN</button></div>
+          <button type="button" class="icon-btn" aria-label="Açık temaya geç"><span class="ic" aria-hidden="true">&#xE706;</span></button>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <header class="head">
+        <div>
+          <h1 class="h1">Hakkında</h1>
+          <p class="sub">Proje, ekip ve kullanılan teknolojiler.</p>
+        </div>
+      </header>
+      <div class="body">
+        <div class="col col-main">
+          <section class="card" style="display: flex; flex-direction: column; gap: 14px">
+            <div style="display: flex; align-items: center; gap: 16px">
+              <span class="ic" aria-hidden="true" style="width: 56px; height: 56px; border-radius: 14px; background: var(--primary-tint); color: var(--primary-text); font-size: 28px">&#xED5F;</span>
+              <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+                <div style="display: flex; align-items: center; gap: 10px"><h2 style="font-size: 22px; font-weight: 600">JestKontrol</h2><span class="badge neutral">Sürüm 0.1</span></div>
+                <p style="font-size: 15px; color: var(--text2)">El Hareketiyle Bilgisayar Uygulamalarını Kontrol Etme Sistemi</p>
+              </div>
+            </div>
+            <p class="cap" style="font-size: 13px">Fırat Üniversitesi · Mühendislik Fakültesi · Bilgisayar Mühendisliği Tasarımı dersi, takım projesi</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+              <span class="badge neutral">Python 3.12</span><span class="badge neutral">OpenCV</span><span class="badge neutral">MediaPipe Hands</span><span class="badge neutral">PyAutoGUI</span><span class="badge neutral">pycaw</span><span class="badge neutral">CustomTkinter</span>
+            </div>
+            <div><a class="btn btn-sec" href="https://github.com/yasir-keles/El-Hareketleriyle-Bilgisayar-Uygulamalar-n-Kontrol-Etme-Sistemi"><span class="ic" aria-hidden="true">&#xE8A7;</span>GitHub deposunu aç</a></div>
+          </section>
+          <section class="card">
+            <div class="card-h"><span class="ic" aria-hidden="true">&#xE9F5;</span><h2 class="card-t">Nasıl çalışır</h2></div>
+            <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr); align-items: stretch; gap: 6px">
+              <li style="display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 10px; background: var(--bg); border: 1px solid var(--border)">
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600"><span class="ic t-pri" aria-hidden="true" style="font-size: 16px">&#xE722;</span>1. Görüntü alma</span>
+                <span class="cap" style="font-size: 12px; line-height: 1.45">OpenCV kamera karesini alır, boyutlandırır ve RGB'ye çevirir.</span>
+              </li>
+              <li aria-hidden="true" class="ic" style="color: var(--text3); font-size: 12px">&#xE76C;</li>
+              <li style="display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 10px; background: var(--bg); border: 1px solid var(--border)">
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600"><span class="ic t-pri" aria-hidden="true" style="font-size: 16px">&#xED5F;</span>2. El iskeleti</span>
+                <span class="cap" style="font-size: 12px; line-height: 1.45">MediaPipe elin 21 eklem noktasını üç boyutta bulur.</span>
+              </li>
+              <li aria-hidden="true" class="ic" style="color: var(--text3); font-size: 12px">&#xE76C;</li>
+              <li style="display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 10px; background: var(--bg); border: 1px solid var(--border)">
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600"><span class="ic t-pri" aria-hidden="true" style="font-size: 16px">&#xE962;</span>3. Hareket ve kontrol</span>
+                <span class="cap" style="font-size: 12px; line-height: 1.45">Parmak uçları arası mesafeden hareket tanınır; PyAutoGUI ve pycaw komutu işletir.</span>
+              </li>
+            </ol>
+            <p class="cap" style="margin-top: 12px; font-size: 13px">İmleç titremesini azaltmak için konuma üstel yumuşatma (exponential smoothing) uygulanır.</p>
+          </section>
+          <section class="card">
+            <div class="card-h"><span class="ic" aria-hidden="true">&#xE72E;</span><h2 class="card-t">Gizlilik</h2></div>
+            <p style="font-size: 14px; color: var(--text2)">Kamera görüntüsü yalnızca bu bilgisayarda işlenir. Görüntü kaydedilmez ve hiçbir yere gönderilmez.</p>
+          </section>
+        </div>
+        <div class="col col-side" style="width: 360px">
+          <section class="card">
+            <div class="card-h"><span class="ic" aria-hidden="true">&#xE716;</span><h2 class="card-t">Ekip: Yazılımcılar</h2></div>
+            <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+              <li style="display: flex; gap: 12px; padding: 10px 0">
+                <span class="avatar" aria-hidden="true">YE</span>
+                <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
+                  <div style="display: flex; align-items: center; gap: 8px"><span style="font-weight: 600">Yasir Elkeleş</span><span class="badge">Takım kaptanı</span></div>
+                  <span class="cap" style="font-size: 13px">Hareket algoritmaları ve sistem entegrasyonu</span>
+                </div>
+              </li>
+              <li style="display: flex; gap: 12px; padding: 10px 0; border-top: 1px solid var(--border)">
+                <span class="avatar" aria-hidden="true">İE</span>
+                <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
+                  <span style="font-weight: 600">İbrahim Ebu Şeneb</span>
+                  <span class="cap" style="font-size: 13px">Görüntü işleme ve el tespiti</span>
+                </div>
+              </li>
+              <li style="display: flex; gap: 12px; padding: 10px 0; border-top: 1px solid var(--border)">
+                <span class="avatar" aria-hidden="true">ME</span>
+                <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
+                  <span style="font-weight: 600">Muhammed Hammud Elalavi</span>
+                  <span class="cap" style="font-size: 13px">Kullanıcı arayüzü, test ve raporlama</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="card">
+            <div class="card-h"><span class="ic" aria-hidden="true">&#xE765;</span><h2 class="card-t">Klavye kısayolları</h2></div>
+            <dl style="margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); row-gap: 12px; column-gap: 14px; align-items: center; font-size: 13px">
+              <dt><kbd class="kbd">Ctrl+Alt+G</kbd></dt><dd style="margin: 0; color: var(--text2)">Sistemi başlatır veya durdurur; her uygulamada çalışır</dd>
+              <dt><kbd class="kbd">Ctrl+1 … Ctrl+5</kbd></dt><dd style="margin: 0; color: var(--text2)">Sayfalar arasında geçiş</dd>
+              <dt><kbd class="kbd">Ctrl+M</kbd></dt><dd style="margin: 0; color: var(--text2)">Mini pencereyi açar</dd>
+              <dt><kbd class="kbd">Esc</kbd></dt><dd style="margin: 0; color: var(--text2)">Süren testi durdurur</dd>
+            </dl>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

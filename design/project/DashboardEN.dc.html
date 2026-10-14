@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Control Panel — English</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./jk.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="jk">
+  <div class="tb">
+    <div class="tb-app"><span class="ic tb-logo" aria-hidden="true">&#xED5F;</span><span>JestKontrol</span></div>
+    <div class="tb-ctl" aria-hidden="true"><span class="ic">&#xE921;</span><span class="ic">&#xE922;</span><span class="ic">&#xE8BB;</span></div>
+  </div>
+  <div class="shell">
+    <nav class="side" aria-label="Main menu">
+      <div class="brand">
+        <span class="ic brand-mark" aria-hidden="true">&#xED5F;</span>
+        <div><div class="brand-name">JestKontrol</div><div class="brand-sub">Hand gesture control</div></div>
+      </div>
+      <div class="nav">
+        <button type="button" class="nav-item on" aria-current="page"><span class="ic" aria-hidden="true">&#xE80F;</span>Control Panel</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xED5F;</span>Gestures</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE713;</span>Settings</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE9D9;</span>Tests &amp; Performance</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE946;</span>About</button>
+      </div>
+      <div class="side-foot">
+        <div class="estop"><span>Emergency stop</span><kbd class="kbd">Ctrl+Alt+G</kbd></div>
+        <div class="side-row">
+          <div class="seg" role="group" aria-label="Language"><button type="button" aria-pressed="false">TR</button><button type="button" class="on" aria-pressed="true">EN</button></div>
+          <button type="button" class="icon-btn" aria-label="Switch to light theme"><span class="ic" aria-hidden="true">&#xE706;</span></button>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <header class="head">
+        <div>
+          <h1 class="h1">Control Panel</h1>
+          <p class="sub">Your hand gestures are controlling the mouse.</p>
+        </div>
+        <div class="head-act">
+          <button type="button" class="btn btn-sec"><span class="ic" aria-hidden="true">&#xEE49;</span>Mini window</button>
+        </div>
+      </header>
+      <div class="body">
+        <div class="col col-main">
+          <section class="card flexcol grow">
+            <div class="card-h">
+              <span class="ic" aria-hidden="true">&#xE714;</span>
+              <h2 class="card-t">Camera preview</h2>
+              <div class="end"><span class="pill ok"><span class="pill-dot"></span>LIVE</span><span class="cap">HD Webcam · 640×480</span></div>
+            </div>
+            <div class="vp fill">
+              <img src="./art/scene_active_en.svg" alt="Camera image: right hand detected, thumb and index fingertips touching">
+              <span class="vchip tl"><span class="ic" aria-hidden="true">&#xE962;</span>Mouse mode</span>
+              <span class="vchip bl big"><span class="vdot"></span>Left click</span>
+            </div>
+            <div class="strip">
+              <span class="cap">In this mode:</span>
+              <span class="chip"><span class="ic" aria-hidden="true">&#xE8B0;</span>Cursor</span>
+              <span class="chip on"><span class="ic" aria-hidden="true">&#xE815;</span>Left click</span>
+              <span class="chip"><span class="ic" aria-hidden="true">&#xE815;</span>Right click</span>
+              <span class="chip"><span class="ic" aria-hidden="true">&#xE7C2;</span>Drag</span>
+              <a class="link" href="#">All gestures<span class="ic" aria-hidden="true">&#xE76C;</span></a>
+            </div>
+          </section>
+          <section class="card slim" aria-label="Recent events">
+            <div class="events">
+              <span class="lbl"><span class="ic" aria-hidden="true">&#xE81C;</span>Recent events</span>
+              <span class="ev"><time>14:32:08</time>Left click</span>
+              <span class="ev"><time>14:32:05</time>Right click</span>
+              <span class="ev"><time>14:31:52</time>Mode: Mouse</span>
+            </div>
+          </section>
+        </div>
+        <div class="col col-side">
+          <section class="card">
+            <div class="card-h">
+              <h2 class="card-t">System</h2>
+              <div class="end"><span class="pill ok"><span class="pill-dot"></span>ACTIVE</span></div>
+            </div>
+            <div class="row2">
+              <button type="button" class="btn btn-lg btn-sec"><span class="ic" aria-hidden="true">&#xE769;</span>Pause</button>
+              <button type="button" class="btn btn-lg btn-danger"><span class="ic" aria-hidden="true">&#xE71A;</span>Stop</button>
+            </div>
+            <div class="hint" style="margin-top: 12px"><kbd class="kbd">Ctrl+Alt+G</kbd><span>stops from any app</span></div>
+            <div class="divider" style="margin: 14px 0"></div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <span class="lbl" id="mode-l">Operating mode</span>
+              <div class="seg full lg" role="group" aria-labelledby="mode-l">
+                <button type="button" class="on" aria-pressed="true">Mouse</button>
+                <button type="button" aria-pressed="false">Scroll</button>
+                <button type="button" aria-pressed="false">Volume</button>
+              </div>
+            </div>
+          </section>
+          <section class="card grow">
+            <div class="card-h">
+              <h2 class="card-t">Live values</h2>
+              <div class="end"><span class="cap">updates every 0.5 s</span></div>
+            </div>
+            <div class="stats">
+              <div class="stat"><span class="stat-l"><span class="ic" aria-hidden="true">&#xEC4A;</span>FPS</span><span class="stat-v">29.4</span><span class="stat-s"><span class="ic t-ok" aria-hidden="true">&#xE73E;</span>Target ≥ 25</span></div>
+              <div class="stat"><span class="stat-l"><span class="ic" aria-hidden="true">&#xED5F;</span>Hand</span><span class="stat-v txt">Detected</span><span class="stat-s">Right hand (98%)</span></div>
+              <div class="stat"><span class="stat-l"><span class="ic" aria-hidden="true">&#xE815;</span>Gesture</span><span class="stat-v txt">Left click</span><span class="stat-s">Thumb + index</span></div>
+              <div class="stat"><span class="stat-l"><span class="ic" aria-hidden="true">&#xE916;</span>Latency</span><span class="stat-v">24 ms</span><span class="stat-s">Per frame</span></div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="card-h">
+              <h2 class="card-t">Quick settings</h2>
+              <div class="end"><a class="link" href="#">All settings<span class="ic" aria-hidden="true">&#xE76C;</span></a></div>
+            </div>
+            <div class="slr">
+              <label for="q-sens">Sensitivity</label>
+              <div class="sl"><span class="sl-fill" style="width: 47%"></span><span class="sl-knob" style="left: 47%"></span><input class="vh" id="q-sens" type="range" min="0.5" max="2" step="0.1" value="1.2"></div>
+              <span class="slv">1.2×</span>
+            </div>
+            <div class="slr">
+              <label for="q-smooth">Smoothing</label>
+              <div class="sl"><span class="sl-fill" style="width: 63%"></span><span class="sl-knob" style="left: 63%"></span><input class="vh" id="q-smooth" type="range" min="0" max="95" step="5" value="60"></div>
+              <span class="slv">60%</span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

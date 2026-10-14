@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Test ve Performans — Sonuçlar</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./jk.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="jk light">
+  <div class="tb">
+    <div class="tb-app"><span class="ic tb-logo" aria-hidden="true">&#xED5F;</span><span>JestKontrol</span></div>
+    <div class="tb-ctl" aria-hidden="true"><span class="ic">&#xE921;</span><span class="ic">&#xE922;</span><span class="ic">&#xE8BB;</span></div>
+  </div>
+  <div class="shell">
+    <nav class="side" aria-label="Ana menü">
+      <div class="brand">
+        <span class="ic brand-mark" aria-hidden="true">&#xED5F;</span>
+        <div><div class="brand-name">JestKontrol</div><div class="brand-sub">El hareketiyle kontrol</div></div>
+      </div>
+      <div class="nav">
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE80F;</span>Kontrol Paneli</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xED5F;</span>Hareketler</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE713;</span>Ayarlar</button>
+        <button type="button" class="nav-item on" aria-current="page"><span class="ic" aria-hidden="true">&#xE9D9;</span>Test ve Performans</button>
+        <button type="button" class="nav-item"><span class="ic" aria-hidden="true">&#xE946;</span>Hakkında</button>
+      </div>
+      <div class="side-foot">
+        <div class="estop"><span>Acil durdurma</span><kbd class="kbd">Ctrl+Alt+G</kbd></div>
+        <div class="side-row">
+          <div class="seg" role="group" aria-label="Dil"><button type="button" class="on" aria-pressed="true">TR</button><button type="button" aria-pressed="false">EN</button></div>
+          <button type="button" class="icon-btn" aria-label="Koyu temaya geç"><span class="ic" aria-hidden="true">&#xE708;</span></button>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <header class="head">
+        <div>
+          <h1 class="h1">Test ve Performans</h1>
+          <p class="sub">Sistemin hızını ve doğruluğunu ölçün; sonuçları rapora aktarın.</p>
+        </div>
+        <div class="head-act">
+          <button type="button" class="btn btn-primary"><span class="ic" aria-hidden="true">&#xEDE1;</span>CSV olarak dışa aktar</button>
+        </div>
+      </header>
+      <div class="body" style="flex-direction: column; gap: 16px">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+          <section class="card">
+            <div class="card-h">
+              <span class="ic" aria-hidden="true">&#xEC4A;</span>
+              <h2 class="card-t">FPS testi</h2>
+              <div class="end"><span class="pill ok"><span class="ic" aria-hidden="true">&#xE73E;</span>BAŞARILI</span></div>
+            </div>
+            <p class="cap">30 sn · 640 × 480 · bugün 14:47 · hedef ≥ 25 FPS</p>
+            <div class="mstats" style="margin-top: 12px">
+              <div class="mstat"><b>29,4</b><span>Ortalama FPS</span></div>
+              <div class="mstat"><b>26,4</b><span>En düşük</span></div>
+              <div class="mstat"><b>30,8</b><span>En yüksek</span></div>
+              <div class="mstat"><b>%100</b><span>Hedefin üstünde</span></div>
+            </div>
+            <div style="display: flex; justify-content: flex-end; margin-top: 12px"><button type="button" class="btn btn-sec btn-sm"><span class="ic" aria-hidden="true">&#xE72C;</span>Tekrar çalıştır</button></div>
+          </section>
+          <section class="card">
+            <div class="card-h">
+              <span class="ic" aria-hidden="true">&#xE815;</span>
+              <h2 class="card-t">Doğruluk testi</h2>
+              <div class="end"><span class="pill ok"><span class="ic" aria-hidden="true">&#xE73E;</span>BAŞARILI</span></div>
+            </div>
+            <p class="cap">Sol tık · 20 deneme · bugün 14:52 · hedef ≥ %90</p>
+            <div class="mstats" style="margin-top: 12px">
+              <div class="mstat"><b>19</b><span>Doğru</span></div>
+              <div class="mstat"><b>1</b><span>Yanlış</span></div>
+              <div class="mstat"><b>0</b><span>Kaçan</span></div>
+              <div class="mstat"><b>%95</b><span>Doğruluk</span></div>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px">
+              <span class="cap">14. denemede sağ tık algılandı.</span>
+              <button type="button" class="btn btn-sec btn-sm"><span class="ic" aria-hidden="true">&#xE72C;</span>Tekrar çalıştır</button>
+            </div>
+          </section>
+        </div>
+        <section class="card grow">
+          <div class="card-h">
+            <span class="ic" aria-hidden="true">&#xE81C;</span>
+            <h2 class="card-t">Test geçmişi</h2>
+            <div class="end"><span class="cap">6 kayıt</span><button type="button" class="btn btn-ghost btn-sm">Geçmişi temizle</button></div>
+          </div>
+          <table class="tbl">
+            <thead><tr><th scope="col">Tarih ve saat</th><th scope="col">Test</th><th scope="col">Ayarlar</th><th scope="col">Sonuç</th><th scope="col">Durum</th></tr></thead>
+            <tbody>
+              <tr><td class="num">14.10.2026 14:52</td><td class="strong">Doğruluk</td><td>Sol tık · 20 deneme</td><td class="num strong">%95 (19/20)</td><td><span class="pill ok"><span class="ic" aria-hidden="true">&#xE73E;</span>Başarılı</span></td></tr>
+              <tr><td class="num">14.10.2026 14:47</td><td class="strong">FPS</td><td>30 sn · 640 × 480</td><td class="num strong">Ort. 29,4 FPS</td><td><span class="pill ok"><span class="ic" aria-hidden="true">&#xE73E;</span>Başarılı</span></td></tr>
+              <tr><td class="num">14.10.2026 14:40</td><td class="strong">Doğruluk</td><td>Sağ tık · 20 deneme</td><td class="num strong">%85 (17/20)</td><td><span class="pill err"><span class="ic" aria-hidden="true">&#xE711;</span>Hedefin altında</span></td></tr>
+              <tr><td class="num">14.10.2026 14:31</td><td class="strong">FPS</td><td>30 sn · 1280 × 720</td><td class="num strong">Ort. 21,6 FPS</td><td><span class="pill err"><span class="ic" aria-hidden="true">&#xE711;</span>Hedefin altında</span></td></tr>
+              <tr><td class="num">13.10.2026 18:05</td><td class="strong">Doğruluk</td><td>Karışık · 30 deneme</td><td class="num strong">%90 (27/30)</td><td><span class="pill ok"><span class="ic" aria-hidden="true">&#xE73E;</span>Başarılı</span></td></tr>
+              <tr><td class="num">13.10.2026 17:52</td><td class="strong">FPS</td><td>60 sn · 640 × 480</td><td class="num strong">Ort. 28,8 FPS</td><td><span class="pill ok"><span class="ic" aria-hidden="true">&#xE73E;</span>Başarılı</span></td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
