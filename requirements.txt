@@ -1,0 +1,7 @@
+customtkinter>=5.2
+pillow>=10.0
+opencv-contrib-python>=4.8
+mediapipe==0.10.21
+pyautogui>=0.9.54
+pycaw==20260927
+pytest>=8.0
