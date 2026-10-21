@@ -1,15 +1,23 @@
 """About: project information, how it works, privacy, team and shortcuts."""
 
+import webbrowser
+
 import customtkinter as ctk
 
 from jestkontrol.ui.context import UiContext
 from jestkontrol.ui.pages.base import PAGE_PADDING, Page
+from jestkontrol.ui.widgets.controls import make_button
 from jestkontrol.ui.widgets.surfaces import Card, KeyChip, Pill, card_header
 
 VERSION = "0.1"
+REPOSITORY_URL = "https://github.com/yasir-keles/El-Hareketleriyle-Bilgisayar-Uygulamalar-n-Kontrol-Etme-Sistemi"
 TECHNOLOGIES = ("Python 3.12", "OpenCV", "MediaPipe Hands", "PyAutoGUI", "pycaw", "CustomTkinter")
-# As listed in the requirements report (Hafta2_Gereksinim_Analiz_Raporu.docx).
-TEAM = (("Muhammed Hammud Elalavi", True), ("Yasir Elkeleş", False), ("İbrahim Ebu Şeneb", False))
+# (name, is captain, role) as in the requirements report (Hafta2_Gereksinim_Analiz_Raporu.docx).
+TEAM = (
+    ("Muhammed Hammud Elalavi", True, "about.role.interface"),
+    ("Yasir Elkeleş", False, "about.role.gestures"),
+    ("İbrahim Ebu Şeneb", False, "about.role.vision"),
+)
 FIXED_SHORTCUTS = (
     ("Ctrl+1 … Ctrl+5", "about.shortcut.pages"),
     ("Ctrl+M", "about.shortcut.mini"),
@@ -57,9 +65,12 @@ class AboutPage(Page):
         ctk.CTkLabel(card, text=ctx.t("about.project"), anchor="w", font=ctx.theme.font("body"), text_color=c.text_2).grid(row=1, column=1, sticky="w")
         ctk.CTkLabel(card, text=ctx.t("about.course"), anchor="w", font=ctx.theme.font("caption"), text_color=c.text_muted).grid(row=2, column=1, sticky="w", pady=(0, 6))
         badges = ctk.CTkFrame(card, fg_color="transparent")
-        badges.grid(row=3, column=0, columnspan=2, sticky="w", padx=20, pady=(0, 18))
+        badges.grid(row=3, column=0, columnspan=2, sticky="w", padx=20, pady=(0, 12))
         for name in TECHNOLOGIES:
             Pill(badges, ctx, name, "primary").pack(side="left", padx=(0, 8))
+        make_button(
+            card, ctx, ctx.t("about.github"), icon="external_link", command=lambda: webbrowser.open(REPOSITORY_URL)
+        ).grid(row=4, column=0, columnspan=2, sticky="w", padx=20, pady=(0, 18))
 
     def _build_how_it_works(self, body) -> None:
         ctx = self.ctx
@@ -75,12 +86,15 @@ class AboutPage(Page):
     def _build_team(self, body) -> None:
         ctx, c = self.ctx, self.ctx.colors
         card = self._card(body, 2, 0, ctx.t("about.team.title"), "people")
-        for index, (name, captain) in enumerate(TEAM, start=1):
-            row = ctk.CTkFrame(card, fg_color="transparent")
-            row.grid(row=index, column=0, sticky="w", padx=20, pady=(0, 8))
-            ctk.CTkLabel(row, text=name, font=ctx.theme.font("body"), text_color=c.text).pack(side="left")
+        for index, (name, captain, role_key) in enumerate(TEAM, start=1):
+            member = ctk.CTkFrame(card, fg_color="transparent")
+            member.grid(row=index, column=0, sticky="w", padx=20, pady=(0, 10))
+            title = ctk.CTkFrame(member, fg_color="transparent")
+            title.pack(anchor="w")
+            ctk.CTkLabel(title, text=name, font=ctx.theme.font("label"), text_color=c.text, height=22).pack(side="left")
             if captain:
-                Pill(row, ctx, ctx.t("about.team.captain"), "muted").pack(side="left", padx=10)
+                Pill(title, ctx, ctx.t("about.team.captain"), "primary").pack(side="left", padx=10)
+            ctk.CTkLabel(member, text=ctx.t(role_key), font=ctx.theme.font("caption"), text_color=c.text_muted, height=18).pack(anchor="w")
 
     def _build_shortcuts(self, body) -> None:
         ctx, c = self.ctx, self.ctx.colors
