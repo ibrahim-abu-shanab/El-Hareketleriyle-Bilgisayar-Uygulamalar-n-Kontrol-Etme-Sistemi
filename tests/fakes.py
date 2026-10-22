@@ -114,3 +114,17 @@ class FakeHotkey:
 
     def press(self) -> None:
         self._on_pressed()
+
+
+class FakeCameraCatalog:
+    """Lists ``names`` as cameras 0, 1, 2...; ``calls`` counts how often the system was asked."""
+
+    def __init__(self, names=("HD Webcam",)) -> None:
+        self.names = list(names)
+        self.calls = 0
+
+    def list_cameras(self):
+        from jestkontrol.domain.camera import CameraDevice
+
+        self.calls += 1
+        return [CameraDevice(index, name) for index, name in enumerate(self.names)]

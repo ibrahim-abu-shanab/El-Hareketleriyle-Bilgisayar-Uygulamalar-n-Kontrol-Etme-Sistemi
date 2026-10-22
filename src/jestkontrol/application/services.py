@@ -4,6 +4,7 @@ from collections.abc import Callable
 from dataclasses import dataclass
 
 from jestkontrol.application.actions import build_action_dispatcher
+from jestkontrol.application.camera_selection import CameraSelection
 from jestkontrol.application.diagnostics.history import (
     DiagnosticsHistory,
     DiagnosticsRepository,
@@ -65,7 +66,7 @@ class AppServices:
     event_log: EventLog
     diagnostics: DiagnosticsRunner
     history: DiagnosticsHistory
-    cameras: CameraCatalog
+    camera_selection: CameraSelection
     clock: Clock
     emergency: EmergencyShortcut
     tracker: HandTracker
@@ -77,9 +78,9 @@ class AppServices:
 
 
 def create_services(
-    adapters: Adapters, source_factory: Callable[[SettingsProvider], FrameSource]
+    adapters: Adapters, source_factory: Callable[[SettingsProvider, CameraSelection], FrameSource]
 ) -> AppServices:
-    """``source_factory(settings_store)`` builds the FrameSource, which reads live camera settings."""
+    """``source_factory(settings, camera_selection)`` builds the FrameSource, which reads live camera settings."""
     settings = SettingsStore(adapters.settings_repository)
     translator = Translator(settings.current.language)
     settings.subscribe(lambda updated: translator.set_language(updated.language))
@@ -97,7 +98,10 @@ def create_services(
         adapters.clock,
     )
     meter = PerformanceMeter()
-    runtime = GestureRuntime(source_factory(settings), processor, controller, meter, adapters.clock)
+    camera_selection = CameraSelection(adapters.cameras, settings)
+    runtime = GestureRuntime(
+        source_factory(settings, camera_selection), processor, controller, meter, adapters.clock
+    )
 
     history = DiagnosticsHistory(adapters.diagnostics_repository, adapters.exporter)
     diagnostics = DiagnosticsRunner(runtime, controller, settings, history, adapters.clock)
@@ -124,7 +128,7 @@ def create_services(
         event_log,
         diagnostics,
         history,
-        adapters.cameras,
+        camera_selection,
         adapters.clock,
         EmergencyShortcut(adapters.hotkey, settings),
         adapters.tracker,

@@ -21,7 +21,6 @@ class SettingRange:
 
 
 SETTING_RANGES: dict[str, SettingRange] = {
-    "camera_index": SettingRange(0, 9, 1),
     "sensitivity": SettingRange(0.5, 2.0, 0.1),
     "smoothing_percent": SettingRange(0, 95, 5),
     "active_area_margin_percent": SettingRange(0, 30, 1),
@@ -40,7 +39,7 @@ ALWAYS_ENABLED_GESTURES = frozenset({GestureType.MOVE})
 
 @dataclass(frozen=True, slots=True)
 class Settings:
-    camera_index: int = 0
+    camera_name: str = ""  # "" = automatic (first physical camera)
     resolution: tuple[int, int] = (640, 480)
     mirror: bool = True
     show_skeleton: bool = True

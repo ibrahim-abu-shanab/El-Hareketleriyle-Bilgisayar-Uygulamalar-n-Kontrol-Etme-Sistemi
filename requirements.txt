@@ -5,3 +5,4 @@ mediapipe==0.10.21
 pyautogui>=0.9.54
 pycaw==20260927
 pytest>=8.0
+cv2-enumerate-cameras==1.4.0

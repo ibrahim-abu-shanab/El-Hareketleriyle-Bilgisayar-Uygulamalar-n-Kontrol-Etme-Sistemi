@@ -3,6 +3,7 @@
 from collections.abc import Callable
 from typing import Any, Protocol
 
+from jestkontrol.domain.camera import CameraDevice
 from jestkontrol.domain.gestures import MouseButton
 from jestkontrol.domain.landmarks import HandFrame
 from jestkontrol.domain.settings import Settings
@@ -73,8 +74,8 @@ class SettingsRepository(Protocol):
 
 
 class CameraCatalog(Protocol):
-    def available_indices(self, keep: int | None = None) -> list[int]:
-        """Indices of cameras that can be opened; ``keep`` is always included."""
+    def list_cameras(self) -> list[CameraDevice]:
+        """The cameras the system knows, numbered the way the capture backend numbers them."""
 
 
 class HotkeyListener(Protocol):

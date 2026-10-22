@@ -59,7 +59,7 @@ class SystemActions:
             self._ctx.dispatcher.post(self._ctx.toast, self._ctx.t("toast.camera_lost"), tone="danger")
 
     def _show_camera_failed(self) -> None:
-        camera = self._ctx.t("camera.name", number=self._services.settings.current.camera_index + 1)
+        camera = self._services.camera_selection.label() or self._ctx.t("camera.generic")
         self._ctx.dialog(
             title=self._ctx.t("dialog.camera_failed.title"),
             text=self._ctx.t("dialog.camera_failed.text", camera=camera),

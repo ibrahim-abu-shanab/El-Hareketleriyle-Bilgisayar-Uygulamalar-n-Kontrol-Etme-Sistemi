@@ -263,11 +263,9 @@ class DashboardPage(Page):
         status = self._services.controller.status
         placeholder = ctx.t("format.placeholder")
         live = status.state is not SystemState.OFF
-        camera_index = self._services.settings.current.camera_index
         width, height = self._services.settings.current.resolution
-        self._camera_label.configure(
-            text=ctx.t("preview.camera_label", camera=ctx.t("camera.name", number=camera_index + 1), width=width, height=height)
-        )
+        camera = self._services.camera_selection.label() or ctx.t("settings.camera.none")
+        self._camera_label.configure(text=ctx.t("preview.camera_label", camera=camera, width=width, height=height))
         snapshot = self._services.monitor.snapshot()
         performance = self._services.meter.snapshot()
         tiles = self._tiles

@@ -13,7 +13,7 @@ def test_missing_file_gives_defaults(tmp_path):
 def test_settings_survive_a_save_and_load_round_trip(tmp_path):
     repository = JsonSettingsRepository(tmp_path / "nested" / "settings.json")
     settings = Settings(
-        camera_index=1,
+        camera_name="HD Webcam",
         resolution=(1280, 720),
         mirror=False,
         sensitivity=1.5,

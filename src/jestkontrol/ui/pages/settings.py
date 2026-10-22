@@ -72,7 +72,8 @@ class SettingsPage(Page):
         ctx, current = self.ctx, self._settings.current
         card = self._card(parent, "settings.section.camera", "camera", 0)
         camera_row = self._row(card, 1, "camera")
-        self._camera_box = make_dropdown(camera_row.control_slot, ctx, [self._camera_name(current.camera_index)], self._camera_name(current.camera_index), self._on_camera, width=170)
+        shown = self._services.camera_selection.label() or ctx.t("settings.camera.none")
+        self._camera_box = make_dropdown(camera_row.control_slot, ctx, [shown], shown, self._on_camera, width=210)
         self._camera_box.pack()
         resolution_row = self._row(card, 2, "resolution")
         make_dropdown(resolution_row.control_slot, ctx, [_resolution_text(r) for r in RESOLUTION_CHOICES], _resolution_text(current.resolution), self._on_resolution, width=170).pack()
@@ -135,24 +136,30 @@ class SettingsPage(Page):
 
     # --- handlers ----------------------------------------------------------------------------
 
-    def _camera_name(self, index: int) -> str:
-        return self.ctx.t("camera.name", number=index + 1)
-
     def _load_cameras_in_background(self) -> None:
-        current = self._settings.current.camera_index
+        """Looks for cameras again (a phone app may have started since the last look) without freezing the page."""
 
-        def probe() -> None:
-            indices = self._services.cameras.available_indices(keep=current)
-            self.on_ui_thread(lambda: self._fill_cameras(indices))()
+        def look() -> None:
+            self._services.camera_selection.refresh()
+            self.on_ui_thread(self._fill_cameras)()
 
-        threading.Thread(target=probe, name="camera-probe", daemon=True).start()
+        threading.Thread(target=look, name="camera-list", daemon=True).start()
 
-    def _fill_cameras(self, indices: list[int]) -> None:
-        self._camera_box.configure(values=[self._camera_name(i) for i in indices])
+    def _fill_cameras(self) -> None:
+        selection = self._services.camera_selection
+        names = [device.name for device in selection.devices()]
+        shown = selection.label()
+        if shown and shown not in names:  # the saved camera is not connected right now: keep showing it
+            names.append(shown)
+        self._camera_box.configure(values=names or [self.ctx.t("settings.camera.none")])
+        self._camera_box.set(shown or self.ctx.t("settings.camera.none"))
 
-    def _on_camera(self, label: str) -> None:
-        index = int(label.rsplit(" ", 1)[-1]) - 1
-        self._settings.change(camera_index=index)
+    def _on_camera(self, name: str) -> None:
+        selection = self._services.camera_selection
+        device = next((d for d in selection.devices() if d.name == name), None)
+        if device is None:  # the "no camera" placeholder, or a saved camera that is not connected
+            return
+        selection.select(device)
         self.ctx.system.restart_if_running()
 
     def _on_resolution(self, label: str) -> None:

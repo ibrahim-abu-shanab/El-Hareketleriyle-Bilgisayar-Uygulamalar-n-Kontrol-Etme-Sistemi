@@ -2,20 +2,27 @@
 
 import cv2
 
+from jestkontrol.application.camera_selection import CameraSelection
 from jestkontrol.application.ports import CameraError, Frame, SettingsProvider
 
 
 class OpenCvFrameSource:
-    def __init__(self, settings: SettingsProvider) -> None:
+    def __init__(self, settings: SettingsProvider, selection: CameraSelection) -> None:
         self._settings = settings
+        self._selection = selection
         self._capture: cv2.VideoCapture | None = None
 
     def open(self) -> None:
+        self._selection.refresh()  # numbers shift when devices appear or go: never open a stale one
+        device = self._selection.selected()
+        if device is None:
+            saved = self._selection.label()
+            raise CameraError(f"Camera {saved!r} is not connected" if saved else "No camera found")
         settings = self._settings.current
-        capture = cv2.VideoCapture(settings.camera_index, cv2.CAP_DSHOW)
+        capture = cv2.VideoCapture(device.index, cv2.CAP_DSHOW)
         if not capture.isOpened():
             capture.release()
-            raise CameraError(f"Camera {settings.camera_index} could not be opened")
+            raise CameraError(f"Camera {device.name!r} could not be opened")
         width, height = settings.resolution
         capture.set(cv2.CAP_PROP_FRAME_WIDTH, width)
         capture.set(cv2.CAP_PROP_FRAME_HEIGHT, height)

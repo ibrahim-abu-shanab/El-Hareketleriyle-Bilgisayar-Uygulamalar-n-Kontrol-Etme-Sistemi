@@ -57,6 +57,12 @@ python -m jestkontrol --headless --mode mouse --debug   # pencere olmadan; FPS v
 
 Eşik değerleri (tıklama eşiği, bekleme süresi, kaydırma hızı vb.) Ayarlar sayfasından değiştirilebilir. Varsayılanlar henüz gerçek kullanıcılarla ayarlanmamıştır.
 
+### Kamera seçimi
+
+Kameralar Ayarlar sayfasında **adıyla** listelenir (ör. `HD Webcam`). Seçim isimle kaydedilir; telefon uygulaması gibi cihazlar açılıp kapandığında sıra değişse de doğru kamera bulunur.
+
+İlk açılışta sanal kameralar (Iriun, OBS, NVIDIA Broadcast, DroidCam vb.) ve kızılötesi kameralar otomatik seçilmez; bunlar çoğunlukla siyah ya da gri görüntü verir. Bilgisayarın kendi kamerası seçilir. İsterseniz Ayarlar'dan başka bir kamera seçebilirsiniz; sistem çalışıyorsa kamera yeniden başlatılır.
+
 ### Kısayollar
 
 | Tuş | İşlev |

@@ -5,6 +5,7 @@ from jestkontrol.domain.appearance import Language
 from jestkontrol.domain.modes import SystemState
 from jestkontrol.domain.settings import Settings
 from tests.fakes import (
+    FakeCameraCatalog,
     FakeClock,
     FakeFrameSource,
     FakeHotkey,
@@ -18,11 +19,6 @@ from tests.test_diagnostics import MemoryRepository, RecordingExporter
 from tests.test_metrics_and_settings_store import InMemoryRepository
 
 
-class OneCamera:
-    def available_indices(self, keep=None):
-        return [0]
-
-
 def build(source=None, hands=None, settings=None):
     adapters = Adapters(
         clock=FakeClock(),
@@ -31,12 +27,12 @@ def build(source=None, hands=None, settings=None):
         screen=FakeScreen(),
         volume=FakeVolume(),
         hotkey=FakeHotkey(),
-        cameras=OneCamera(),
+        cameras=FakeCameraCatalog(),
         settings_repository=InMemoryRepository(settings),
         diagnostics_repository=MemoryRepository(),
         exporter=RecordingExporter(),
     )
-    services = create_services(adapters, lambda _: source or FakeFrameSource(frame_count=5))
+    services = create_services(adapters, lambda *_: source or FakeFrameSource(frame_count=5))
     return services, adapters
 
 
